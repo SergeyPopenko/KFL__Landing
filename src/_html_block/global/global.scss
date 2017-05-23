@@ -1,0 +1,27 @@
+html {
+  font-size: $htmlSize;
+}
+body { 
+  font: 1rem/1 "Lato", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  color: $col;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.clearfix::after {
+  display: table;
+  clear: both;
+
+  content: "";
+}
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
