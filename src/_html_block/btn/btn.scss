@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  font-size: 24px;
+  line-height: 1;
+  border-radius: 0;
+  letter-spacing: .025em;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  &--red {
+    min-width: 220px;
+    background: #c90202;
+    padding: 18px 15px;
+  }
+  &--orange {
+    min-width: 200px;
+    padding: 13px 15px;
+  }
+}

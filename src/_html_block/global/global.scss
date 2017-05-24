@@ -1,27 +1,21 @@
 html {
   font-size: $htmlSize;
+  box-sizing: border-box;
 }
 body { 
-  font: 1rem/1 "Lato", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  font: 1rem/1 "Evolventa", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
   color: $col;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $bg;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
-.clearfix::after {
-  display: table;
-  clear: both;
-
-  content: "";
-}
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+.wrapper {
+  @include wrapper;
 }

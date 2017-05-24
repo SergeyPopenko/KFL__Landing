@@ -1,0 +1,14 @@
+@mixin main-title($margin: 0) {
+  font-weight: 700;
+  margin: $margin;
+  letter-spacing: .05em;
+  font-size: 100px;
+  line-height: 1;
+  color: #b6b9c1;
+  text-transform: uppercase;
+}
+@mixin wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

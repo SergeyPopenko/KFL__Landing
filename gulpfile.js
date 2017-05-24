@@ -6,6 +6,8 @@ var del = require("del");
 /*Переименовывание файлов*/
 var rename = require("gulp-rename");
 
+var plumber = require("gulp-plumber");
+
 /*Синхронная обработка файлов*/
 var runSequence = require("run-sequence");
 
@@ -166,17 +168,6 @@ gulp.task("browserSync", function(){
 });
 /*---------------------------------------------------------------*/
 
-gulp.task("build", function(cb){
-  
-  runSequence("clean:dev", ["copyJS:dev", "copyFont:dev", "images:dev"], "html:dev", "styles:dev", "scripts:dev", "browserSync", "watch", cb);
-
-});
-gulp.task("production", function(cb){
-  
-  runSequence("clean:dev", ["copyJS:dev", "copyFont:dev", "images:dev"], "html:dev", "csscomb:dev", "styles:dev", "scripts:dev", "browserSync", "watch", cb);
-
-});
-
 gulp.task("watch", function(){
 
   watch([path.watch.css], function(event, cb){
@@ -202,5 +193,17 @@ gulp.task("watch", function(){
   watch([path.watch.copyFont], function(event, cb){
     gulp.start("copyFont:dev");
   });
+
+});
+
+gulp.task("build", function(cb){
+  
+  runSequence("clean:dev", ["copyJS:dev", "copyFont:dev", "images:dev"], "html:dev", "styles:dev", "scripts:dev", "browserSync", "watch", cb);
+
+});
+
+gulp.task("production", function(cb){
+  
+  runSequence("clean:dev", ["copyJS:dev", "copyFont:dev", "images:dev"], "html:dev", "csscomb:dev", "styles:dev", "scripts:dev", cb);
 
 });
