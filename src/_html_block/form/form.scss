@@ -1,0 +1,82 @@
+.form {
+  background: #1888df url(#{$img-path}/form/bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  padding: 46px 0 50px;
+  text-align: center;
+  &__title {
+    font-size: 30px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    color: #fff;
+    margin: 0 0 50px;
+  }
+  &__block {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__field {
+    position: relative;
+    @include fieldset(0 0 30px, 20px 0 0);
+    &:last-child {
+      margin: 0 0 70px;
+    }
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+  }
+  &__input {
+    display: block;
+    height: 33px;
+    width: 100%;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    letter-spacing: 0.025em;
+    color: #fff;
+    background: transparent;
+    padding: 5px 10px;
+    text-align: center;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    &:focus + .form__label,
+    &:required:valid + .form__label{
+      top: 0;
+      font-size: 0.75em;
+    }
+  }
+  &__input--valid {
+    border-bottom-color: #2bd42b;
+  }
+  &__input--invalid {
+    border-bottom-color: #e26464;
+  }
+  &__label {
+    position: absolute;
+    width: 100%;
+    letter-spacing: 0.025em;
+    color: #fff;
+    text-align: center;
+    left: 0;
+    top: 0.83em;
+    transition: .3s;
+  }
+  &__label--focus {
+    top: 0;
+    font-size: 0.75em;
+  }
+  &__text-invalid {
+    color: #e26464;
+    margin: 0;
+    font-weight: 400;
+    position: absolute;
+    bottom: -1.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.5em;
+  }
+  &__feedback {
+    display: none;
+  }
+}

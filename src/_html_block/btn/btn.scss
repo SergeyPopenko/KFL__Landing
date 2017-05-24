@@ -9,6 +9,8 @@
   color: #fff;
   text-decoration: none;
   text-align: center;
+  outline: none;
+  transition: .3s;
   &--red {
     min-width: 220px;
     background: #c90202;
@@ -17,5 +19,14 @@
   &--orange {
     min-width: 200px;
     padding: 13px 15px;
+    background: #ff9302;
+    &:hover,
+    &:focus,
+    &:active {
+      background: #cc6600;
+    }
   }
+}
+.btn-close {
+
 }

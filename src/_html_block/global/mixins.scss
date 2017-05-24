@@ -12,3 +12,8 @@
   margin: 0 auto;
   padding: 0 15px;
 }
+@mixin fieldset($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+  border: 0;
+}
