@@ -49,7 +49,7 @@ var path = {
     html:     "src/*.html", 
     copyJS:   "src/js/**/*",
     copyFont: "src/_html_block/font/**/*", 
-    img:      "src/img/**/*.{png,jpg,gif}", 
+    img:      "src/img/**/*.{png,jpg,gif,svg,ico}", 
     js:       "src/_html_block/**/*.js", 
     csscomb:  "src/_html_block/**/*.scss", 
     css:      "src/_html_block/main.scss" 

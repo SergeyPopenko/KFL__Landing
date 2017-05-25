@@ -1,5 +1,5 @@
 .form {
-  background: #1888df url(#{$img-path}/form/bg.jpg) no-repeat 50% 50%;
+  background: $bg-blue url(#{$img-path}/form/bg.jpg) no-repeat 50% 50%;
   background-size: cover;
   padding: 46px 0 50px;
   text-align: center;
@@ -7,7 +7,7 @@
     font-size: 30px;
     line-height: 1.6;
     letter-spacing: 0.05em;
-    color: #fff;
+    color: $col-fff;
     margin: 0 0 50px;
   }
   &__block {
@@ -21,7 +21,7 @@
     &:last-child {
       margin: 0 0 70px;
     }
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1;
     font-weight: 700;
   }
@@ -33,12 +33,12 @@
     font-weight: inherit;
     font-size: inherit;
     letter-spacing: 0.025em;
-    color: #fff;
+    color: $col-fff;
     background: transparent;
     padding: 5px 10px;
     text-align: center;
     border: 0;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid $col-fff;
     &:focus + .form__label,
     &:required:valid + .form__label{
       top: 0;
@@ -46,19 +46,19 @@
     }
   }
   &__input--valid {
-    border-bottom-color: #2bd42b;
+    border-bottom-color: $col-valid;
   }
   &__input--invalid {
-    border-bottom-color: #e26464;
+    border-bottom-color: $col-invalid;
   }
   &__label {
     position: absolute;
     width: 100%;
     letter-spacing: 0.025em;
-    color: #fff;
+    color: $col-fff;
     text-align: center;
     left: 0;
-    top: 0.83em;
+    top: 1.4em;
     transition: .3s;
   }
   &__label--focus {
@@ -66,15 +66,15 @@
     font-size: 0.75em;
   }
   &__text-invalid {
-    color: #e26464;
+    color: $col-invalid;
     margin: 0;
     font-weight: 400;
     position: absolute;
-    bottom: -1.67em;
+    bottom: -1.4em;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 0.5em;
+    font-size: 0.7em;
   }
   &__feedback {
     display: none;

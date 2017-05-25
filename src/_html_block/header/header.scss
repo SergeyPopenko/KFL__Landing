@@ -1,0 +1,13 @@
+.header {
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  &__logo {
+    @include logo;
+  }
+  &__phone {
+    @include phone;
+  }
+}

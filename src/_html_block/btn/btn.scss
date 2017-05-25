@@ -15,13 +15,16 @@
     min-width: 220px;
     background: #c90202;
     padding: 18px 15px;
+    &:hover,
+    &:active {
+      background: #830202;
+    }
   }
   &--orange {
     min-width: 200px;
     padding: 13px 15px;
     background: #ff9302;
     &:hover,
-    &:focus,
     &:active {
       background: #cc6600;
     }

@@ -4,7 +4,7 @@ html {
 }
 body { 
   font: 1rem/1 "Evolventa", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-  color: $col;
+  color: $col-333;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,6 +16,7 @@ body {
 *::before {
   box-sizing: inherit;
 }
+
 .wrapper {
   @include wrapper;
 }
