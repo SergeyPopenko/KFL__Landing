@@ -42,7 +42,7 @@
       validEmpty($(this));
     });
   // ----------------------------------------------------
-  $("#form").on("submit", function(e){
+  $(".form").on("submit", function(e){
     e.preventDefault();
     $(this).find(":required").each(function(){
       validEmpty($(this));
@@ -58,7 +58,7 @@
       });
     }
   });
-  $("#form .form__input").on("blur", function(){
+  $(".form .form__input").on("blur", function(){
     if(!$(this).val().length) {
       $(this).siblings(".form__label").removeClass("form__label--focus");
     } else {
