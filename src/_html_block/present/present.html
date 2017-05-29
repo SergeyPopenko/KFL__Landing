@@ -1,0 +1,30 @@
+<section class="present">
+  <h2 class="present__title">Presentation one of our works</h2>
+  <div class="present__animation"></div>
+  <div class="present__form form">
+    <blockquote class="present__form-descr">Would you like an item that will set you apart from the rest? Opportunity is knocking...</blockquote>
+    <form action="/echo" method="POST" class="form form--present">
+      <fieldset class="form__field">
+        <input type="text" name="name" id="name" class="form__input" required autocomplete="on">
+        <label class="form__label" for="name">Your name*</label>
+      </fieldset>
+      <fieldset class="form__field">
+        <input type="email" name="email" id="email" class="form__input" required autocomplete="on">
+        <label class="form__label" for="email">Your email*</label>
+      </fieldset>
+      <fieldset class="form__field">
+        <input type="text" name="message" id="message" class="form__input" autocomplete="on">
+        <label class="form__label" for="message">Your message</label>
+      </fieldset>
+      <button type="submit" class="btn btn--orange">Take it</button>
+    </form>
+    <div class="form__feedback">
+      <button type="button" class="btn-close">
+        <svg>
+          <use xlink:href="#icon-close" />
+        </svg>
+      </button>
+      <p class="form__feedback-text">Thank you!</p>
+    </div>
+  </div>
+</section>
