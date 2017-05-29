@@ -1,0 +1,38 @@
+.benefits {
+  background: $bg-gray;
+  padding: 37px 55px;
+  &__title {
+    @include main-title(0 0 17px);
+    text-align: right;
+  }
+  &__quote {
+    margin: 0 0 30px;
+    text-align: right;
+    color: $bg-blue;
+    font-weight: 700;
+    letter-spacing: $letter-spacing-25;
+    font-size: 22px;
+    line-height: 1.36;
+    quotes: "\0022" "\0022";
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
+  }
+  &__descr {
+    text-align: center;
+    font-size: 30px;
+    line-height: 2;
+    letter-spacing: $letter-spacing-25;
+    color: #989797;
+    p {
+      margin: 0;
+      transition: .5s;
+    }
+  }
+  &__descr-gray {
+    color: #181717;
+  }
+}
