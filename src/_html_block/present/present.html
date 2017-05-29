@@ -1,20 +1,22 @@
 <section class="present">
   <h2 class="present__title">Presentation one of our works</h2>
   <div class="present__animation"></div>
-  <div class="present__form form">
+  <div class="present__form">
     <blockquote class="present__form-descr">Would you like an item that will set you apart from the rest? Opportunity is knocking...</blockquote>
     <form action="/echo" method="POST" class="form form--present">
-      <fieldset class="form__field">
-        <input type="text" name="name" id="name" class="form__input" required autocomplete="on">
-        <label class="form__label" for="name">Your name*</label>
-      </fieldset>
-      <fieldset class="form__field">
-        <input type="email" name="email" id="email" class="form__input" required autocomplete="on">
-        <label class="form__label" for="email">Your email*</label>
-      </fieldset>
-      <fieldset class="form__field">
-        <input type="text" name="message" id="message" class="form__input" autocomplete="on">
-        <label class="form__label" for="message">Your message</label>
+      <div class="form__field-wrap">
+        <fieldset class="form__field form__field--present form__field--short">
+          <input type="text" name="name" id="name" class="form__input form__input--present" required autocomplete="on">
+          <label class="form__label form__label--present" for="name">Your name*</label>
+        </fieldset>
+        <fieldset class="form__field form__field--present form__field--short">
+          <input type="email" name="email" id="email" class="form__input form__input--present" required autocomplete="on">
+          <label class="form__label form__label--present" for="email">Your email*</label>
+        </fieldset>
+      </div>
+      <fieldset class="form__field form__field--present">
+        <input type="text" name="message" id="message" class="form__input form__input--present" autocomplete="on">
+        <label class="form__label form__label--present" for="message">Your message</label>
       </fieldset>
       <button type="submit" class="btn btn--orange">Take it</button>
     </form>
