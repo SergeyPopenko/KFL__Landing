@@ -12,7 +12,7 @@
   &-title {
     font-size: 30px;
     line-height: 1.6;
-    letter-spacing: 0.05em;
+    letter-spacing: $letter-spacing-50;
     color: $col-fff;
     margin: 0 0 50px;
   }
@@ -33,7 +33,7 @@
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
-    letter-spacing: 0.025em;
+    letter-spacing: $letter-spacing-25;
     color: $col-fff;
     background: transparent;
     padding: 5px 10px;
@@ -55,7 +55,7 @@
   &__label {
     position: absolute;
     width: 100%;
-    letter-spacing: 0.025em;
+    letter-spacing: $letter-spacing-25;
     color: $col-fff;
     text-align: center;
     left: 0;

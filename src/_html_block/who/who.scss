@@ -1,0 +1,75 @@
+.who {
+  padding: 35px 0 50px;
+  max-width: 1130px;
+  position: relative;
+  perspective: 1000px;
+  &--active {
+    &::after {
+      transform: rotateY(-24deg);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: -1;
+    width: 350px;
+    height: 440px;
+    opacity: 0.6;
+    transform-origin: 100% 50%;
+    transition: 1s;
+    background: linear-gradient(to bottom, #02a0f1, #15d4d9) no-repeat 50% 0;
+  }
+  &__title {
+    @include main-title(0 7px 0 0);
+    text-align: right;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img {
+    width: 31%;
+    margin: 0;
+    flex-shrink: 0;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__info {
+    max-width: 92%;
+  }
+  &__descr {
+    width: 69%;
+    padding: 70px 40px 85px;
+    font-size: 30px;
+    line-height: 1.4;
+    letter-spacing: $letter-spacing-25;
+    position: relative;
+    perspective: 500px;
+    p {
+      margin: 0;
+    }
+    &--active {
+      &::after {
+        transform: rotateY(24deg);
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      top: -10px;
+      width: 37%;
+      height: 100%;
+      opacity: 0.4;
+      transform-origin: 0 50%;
+      transition: 1s;
+      background: linear-gradient(to bottom, #02a0f1, #15d4d9) no-repeat 50% 0;
+    }
+  }
+}
