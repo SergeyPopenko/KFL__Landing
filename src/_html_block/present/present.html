@@ -1,22 +1,28 @@
 <section class="present">
   <h2 class="present__title">Presentation one of our works</h2>
-  <div class="present__animation"></div>
+  <div class="present__animation">
+    <figure class="present__img present__img-animation">
+      <img class="present__img-1" src="/img/present/night.jpg" alt="Night present">
+      <img class="present__img-2" src="/img/present/light.jpg" alt="NIght light present">
+      <img class="present__img-3" src="/img/present/day.jpg" alt="Day present">
+    </figure>
+  </div>
   <div class="present__form">
     <blockquote class="present__form-descr">Would you like an item that will set you apart from the rest? Opportunity is knocking...</blockquote>
     <form action="/echo" method="POST" class="form form--present">
       <div class="form__field-wrap">
         <fieldset class="form__field form__field--present form__field--short">
-          <input type="text" name="name" id="name" class="form__input form__input--present" required autocomplete="on">
-          <label class="form__label form__label--present" for="name">Your name*</label>
+          <input type="text" name="name" id="present-name" class="form__input form__input--present" required autocomplete="on">
+          <label class="form__label form__label--present" for="present-name">Your name*</label>
         </fieldset>
         <fieldset class="form__field form__field--present form__field--short">
-          <input type="email" name="email" id="email" class="form__input form__input--present" required autocomplete="on">
-          <label class="form__label form__label--present" for="email">Your email*</label>
+          <input type="email" name="email" id="present-email" class="form__input form__input--present" required autocomplete="on">
+          <label class="form__label form__label--present" for="present-email">Your email*</label>
         </fieldset>
       </div>
       <fieldset class="form__field form__field--present">
-        <input type="text" name="message" id="message" class="form__input form__input--present" autocomplete="on">
-        <label class="form__label form__label--present" for="message">Your message</label>
+        <input type="text" name="message" id="present-message" class="form__input form__input--present" autocomplete="on">
+        <label class="form__label form__label--present" for="present-message">Your message</label>
       </fieldset>
       <button type="submit" class="btn btn--orange">Take it</button>
     </form>

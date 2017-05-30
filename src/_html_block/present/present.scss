@@ -2,6 +2,8 @@
   background: #1a1e27 no-repeat 50% 50%;
   background-size: cover;
   display: flex;
+  justify-content: flex-end;
+  position: relative;
   &__title {
     position: absolute;
     clip: rect(0,0,0,0);
@@ -10,9 +12,6 @@
     visibility: hidden;
     height: 0;
     width: 0;
-  }
-  &__animation {
-    width: 50%;
   }
   &__form {
     width: 50%;
@@ -33,5 +32,83 @@
     &::after {
       content: close-quote;
     }
+  }
+  &__animation {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  &__img-1,
+  &__img-2,
+  &__img-3 {
+    height: 100%;
+    display: block;
+    width: auto;
+  }
+  &__img-2,
+  &__img-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+  }
+  &__img-2 {
+    z-index: 10;
+    .present__img-animation & {
+      animation: presentImg1 8s linear both infinite;
+    }
+  }
+  &__img-3 {
+    z-index: 20;
+    .present__img-animation & {
+      animation: presentImg2 8s linear both infinite;
+    }
+  }
+}
+@keyframes presentImg1 {
+  0 {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes presentImg2 {
+  0 {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

@@ -35,23 +35,29 @@
     el.removeClass("form__input--valid").addClass("form__input--invalid");
   }
 // ----------------------------------------------------
-  
+
 // Submit on form
   // Search keyup on input
     $(".form :required").on("keyup change", function(){
       validEmpty($(this));
     });
   // ----------------------------------------------------
-  $(".form").on("submit", function(e){
-    e.preventDefault();
-    $(this).find(":required").each(function(){
+  $(".form [type='submit']").on("click", function(e){
+    var $form = $(this).closest("form");
+    $form.find(":required").each(function(){
       validEmpty($(this));
     });
+    if ($form.find(".form__text-invalid").length != 0) {
+      e.preventDefault();
+    }
+  });
+  $(".form").on("submit", function(e){
+    e.preventDefault();
     if ($(this).find(".form__text-invalid").length == 0) {
       $.ajax({
-        url: $form.attr("action"),
-        type: $form.attr("method"),
-        data: $form.serialize(),
+        url: $(this).attr("action"),
+        type: $(this).attr("method"),
+        data: $(this).serialize(),
         success: function(data) {
           console.log(data);
         }
