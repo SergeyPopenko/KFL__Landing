@@ -10,4 +10,11 @@
   &__phone {
     @include phone;
   }
+  &__address {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: $letter-spacing-25;
+    margin: 0 auto;
+  }
 }
