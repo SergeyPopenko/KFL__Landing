@@ -1,0 +1,177 @@
+.promo-checker {
+  background: $bg-gray url(#{$img-path}/case/promo/process/promo-checker__bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  padding: 195px 0 0 0;
+  &__title{
+    padding: 35px 0;
+    color: $col-red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   &__img {
+//     position: relative;
+//     margin: 0;
+//   }
+//   &__img-1 {
+//     position: relative;
+//     width: 100%;
+//     height: auto;
+//   }
+//   &__img-2 {
+//     @include promo-img(1);
+//   }
+//   &__img-3 {
+//     @include promo-img(2);
+//   }
+//   &__img-4 {
+//     @include promo-img(3);
+//   }
+//   &__sect {
+//     position: absolute;
+//     right: 12%;
+//     top: 40%;
+//     perspective: 1000px;
+//     text-align: center;
+//     z-index: 100;
+//     transition: .3s;
+//     transform-style: preserve-3d;
+//   }
+//   &__slogan {
+//     margin: 0;
+//     font-weight: 700;
+//     letter-spacing: $letter-spacing-50;
+//     font-size: 45px;
+//     line-height: 1.24;
+//     color: $col-333;
+//     transform-origin: 50% 0;
+//     backface-visibility: hidden;
+//   }
+//   &__slogan-1 {
+//     opacity: 0;
+//   }
+//   &__slogan-2 {
+//     opacity: 0;
+//   }
+//   &__slogan-3 {
+//     opacity: 0;
+//   }
+//   &__info {
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     width: 100%;
+//     transform-origin: 50% 0;
+//     backface-visibility: hidden;
+//     transform: rotateX(-90deg);
+//   }
+//   &__title {
+//     margin: 0;
+//     font-weight: 700;
+//     font-size: 55px;
+//     line-height: 1;
+//     color: #5c616e;
+//     text-transform: uppercase;
+//     letter-spacing: $letter-spacing-50;
+//   }
+//   &__info-text {
+//     margin: 0 0 60px;
+//     letter-spacing: $letter-spacing-50;
+//     font-size: 32px;
+//     line-height: 1.75;
+//     color: $col-333;
+//   }
+//   &__btn {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
+// }
+
+// @keyframes promoStairsOn {
+//   0 {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @keyframes promoStairsOff {
+//   0 {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+// @keyframes promoSlogan {
+//   0 {
+//     transform: rotateX(0) translateY(0);
+//   }
+//   100% {
+//     transform: rotateX(90deg) translateY(-50px);
+//   }
+// }
+// @keyframes promoInfo {
+//   0 {
+//     transform: rotateX(-90deg);
+//     top: 100%;
+//   }
+//   100% {
+//     transform: rotateX(0);
+//     top: 0;
+//   }
+// }
+// @keyframes promoBtn {
+//   0 {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
