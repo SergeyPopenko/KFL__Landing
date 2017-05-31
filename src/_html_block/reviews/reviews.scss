@@ -65,6 +65,7 @@
     margin-top: -25px;
     background: none;
     z-index: 100;
+    transform-origin: 50% 50%;
     svg {
       display: block;
       fill: $bg-blue;
@@ -74,9 +75,7 @@
   }
   &__button--next {
     right: 0;
-    svg {
-      transform: rotate(180deg);
-    }
+    transform: scale(-1);
   }
   &__button--prev {
     left: 0;

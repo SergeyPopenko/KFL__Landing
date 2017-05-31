@@ -37,22 +37,22 @@ var watch = require("gulp-watch");
 /*Пути к файлам*/
 var path = {
   build: {
-    html:     "build/", 
+    html:     "build/",
     htmlmin:  "build/",
-    copyFont: "build/font/", 
-    csscomb:  "_html_block/", 
-    css:      "build/css/", 
-    img:      "build/img/", 
-    js:       "build/js/" 
+    copyFont: "build/font/",
+    csscomb:  "_html_block/",
+    css:      "build/css/",
+    img:      "build/img/",
+    js:       "build/js/"
   },
   src: {
-    html:     "src/*.html", 
+    html:     "src/*.html",
     copyJS:   "src/js/**/*",
-    copyFont: "src/_html_block/font/**/*", 
-    img:      "src/img/**/*.{png,jpg,gif,svg,ico}", 
-    js:       "src/_html_block/**/*.js", 
-    csscomb:  "src/_html_block/**/*.scss", 
-    css:      "src/_html_block/main.scss" 
+    copyFont: "src/_html_block/font/**/*",
+    img:      "src/img/**/*.{png,jpg,gif,svg,ico}",
+    js:       "src/_html_block/**/*.js",
+    csscomb:  "src/_html_block/**/*.scss",
+    css:      "src/_html_block/main.scss"
   },
   watch: {
     html:     "src/**/*.html",
@@ -61,7 +61,7 @@ var path = {
     img:      "src/img/**/*",
     copyJS:   "src/js/**/",
     copyFont: "src/font/**/"
-  },  
+  },
   clean: "build"
 }
 /*----------------------------Таски------------------------------*/
@@ -100,7 +100,7 @@ gulp.task("styles:dev", function(){
       .pipe(plumber())
       .pipe(sass())
       .pipe(autoprefixer({
-        browsers: ["last 2 version", "ie 10"]
+        browsers: ["last 10 version", "ie 10"]
       }))
       .pipe(cmq({
         beautify: false
@@ -197,13 +197,13 @@ gulp.task("watch", function(){
 });
 
 gulp.task("build", function(cb){
-  
+
   runSequence("clean:dev", ["copyJS:dev", "copyFont:dev", "images:dev"], "html:dev", "styles:dev", "scripts:dev", "browserSync", "watch", cb);
 
 });
 
 gulp.task("production", function(cb){
-  
+
   runSequence("clean:dev", ["copyJS:dev", "copyFont:dev", "images:dev"], "html:dev", "csscomb:dev", "styles:dev", "scripts:dev", cb);
 
 });
