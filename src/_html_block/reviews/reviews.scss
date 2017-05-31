@@ -1,0 +1,83 @@
+.reviews {
+  background: $bg-gray;
+  padding: 38px 40px 100px;
+  position: relative;
+  &__title {
+    @include main-title(0 15px -87px);
+    text-align: right;
+    position: relative;
+    z-index: 10;
+  }
+  &__slider {
+    position: relative;
+  }
+  &__slide {
+    display: flex;
+    padding: 87px 65px 0;
+    perspective: 1000px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 350px;
+      height: 440px;
+      background: linear-gradient(-45deg, #feb389, #feedd6);
+      top: 0;
+      left: 0;
+      transform-origin: 0 50%;
+      transition: 1s;
+      .slick-active & {
+        transform: rotateY(25deg);
+      }
+    }
+  }
+  &__slide-descr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    color: #c39804;
+    text-decoration: none;
+    letter-spacing: $letter-spacing-50;
+  }
+  &__img {
+    margin: 0 40px 0 0;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+  }
+  &__quote {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.33;
+    text-align: left;
+  }
+  &__button {
+    position: absolute;
+    padding: 0;
+    border: 0;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    background: none;
+    z-index: 100;
+    transform-origin: 50% 50%;
+    svg {
+      display: block;
+      fill: $bg-blue;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__button--next {
+    right: 0;
+    transform: scale(-1);
+  }
+  &__button--prev {
+    left: 0;
+  }
+}

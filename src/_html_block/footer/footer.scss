@@ -1,0 +1,20 @@
+.footer {
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  &__logo {
+    @include logo;
+  }
+  &__phone {
+    @include phone;
+  }
+  &__address {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: $letter-spacing-25;
+    margin: 0 auto;
+  }
+}
