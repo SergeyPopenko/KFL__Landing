@@ -8,9 +8,6 @@
   }
   &__list {
     position: relative;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: flex;
     justify-content: space-between;
   }
@@ -64,5 +61,33 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+@media #{$smart} {
+  .works {
+    padding: 36px $smart-padding 33px;
+    background: $col-fff;
+    &__title {
+      margin: 0 0 12px
+    }
+    &__list {
+     display: block;
+    }
+    &__item {
+      width: auto;
+      margin: 0 0 10px;
+    }
+    &__item--top {
+      transform: none;
+    }
+    &__item--bottom {
+      transform: none;
+    }
+    &__link {
+      &:hover {
+        box-shadow: none;
+        transform: none;
+      }
+    }
   }
 }
