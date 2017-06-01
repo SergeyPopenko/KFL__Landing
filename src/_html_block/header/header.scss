@@ -11,3 +11,14 @@
     @include phone;
   }
 }
+@media #{$smart} {
+  .header {
+    padding: 0 $smart-padding;
+    min-height: 44px;
+    background: #e1e2e6;
+    color: $col-fff;
+    &__phone {
+      letter-spacing: $letter-spacing-50;
+    }
+  }
+}

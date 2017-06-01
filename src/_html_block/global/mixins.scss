@@ -34,7 +34,6 @@
   letter-spacing: $letter-spacing-200;
   @media #{$smart} {
     font-size: 16px;
-    font-weight: 400;
   }
 }
 
@@ -45,6 +44,9 @@
     display: block;
     height: auto;
     max-width: 100%;
+  }
+  @media #{$smart} {
+    width: 100px;
   }
 }
 
