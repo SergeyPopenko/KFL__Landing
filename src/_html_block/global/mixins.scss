@@ -6,6 +6,9 @@
   line-height: 1;
   color: $col-main-title;
   text-transform: uppercase;
+  @media #{$smart} {
+    font-size: 30px;
+  }
 }
 
 @mixin wrapper {

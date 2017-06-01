@@ -31,10 +31,19 @@
       }
     }
   }
+  &__header {
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    clip: rect(0,0,0,0);
+  }
   &__slide-descr {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    position: relative;
+    z-index: 10;
   }
   &__link {
     font-size: 18px;
@@ -43,11 +52,24 @@
     text-decoration: none;
     letter-spacing: $letter-spacing-50;
   }
-  &__img {
-    margin: 0 40px 0 0;
+  &__link--info {
+    display: none
+  }
+  &__info {
+    width: 33.5%;
     flex-shrink: 0;
     position: relative;
     z-index: 10;
+    margin: 0 40px 0 0;
+  }
+  &__img {
+    width: 100%;
+    margin: 0;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
   }
   &__quote {
     margin: 0;
@@ -79,5 +101,69 @@
   }
   &__button--prev {
     left: 0;
+  }
+}
+@media #{$smart} {
+  .reviews {
+    background: $col-fff;
+    padding: 38px $smart-padding 45px;
+    &__title {
+      margin: 0 0 -10px;
+    }
+    &__slide {
+      display: block;
+      padding: 20px 0 0;
+      &::after {
+        width: 165px;
+        height: 160px;
+        .slick-active & {
+          transform: rotateY(40deg);
+        }
+      }
+    }
+    &__slide-descr {
+      display: block;
+      margin: 0 0 30px;
+    }
+    &__link {
+      font-size: 11px;
+      color: #dcbc76;
+      display: none
+    }
+    &__header {
+      position: relative;
+      z-index: 10;
+      visibility: visible;
+      height: auto;
+      clip: auto;
+      font-size: 12px;
+      line-height: 1.17;
+      text-align: right;
+      letter-spacing: $letter-spacing-50;
+      margin: 0 0 10px;
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      width: auto;
+      margin: 0 0 15px;
+    }
+    &__link--info {
+      display: block;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    &__img {
+      margin: 0 13px 0 auto;
+      max-width: 43%;
+      min-height: 120px;
+    }
+    &__quote {
+      font-size: 11px;
+      line-height: 1.36;
+    }
+    &__button {
+      display: none;
+    }
   }
 }
