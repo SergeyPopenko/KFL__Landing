@@ -14,7 +14,6 @@
   &__slide {
     display: flex;
     padding: 87px 65px 0;
-    perspective: 1000px;
     position: relative;
     &::after {
       position: absolute;
@@ -27,7 +26,7 @@
       transform-origin: 0 50%;
       transition: 1s;
       .slick-active & {
-        transform: rotateY(25deg);
+        transform: perspective(1000px) rotateY(25deg);
       }
     }
   }
@@ -117,7 +116,7 @@
         width: 165px;
         height: 160px;
         .slick-active & {
-          transform: rotateY(40deg);
+          transform: perspective(1000px) rotateY(32deg);
         }
       }
     }

@@ -155,3 +155,8 @@
     transform: translateY(0);
   }
 }
+@media #{$smart} {
+  .promo {
+    display: none;
+  }
+}
