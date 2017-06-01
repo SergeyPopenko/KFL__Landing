@@ -96,7 +96,7 @@
     color: $col-gold;
     text-align: left;
   }
-  &__label--focus {
+  .form__label--focus {
     top: 0;
     font-size: 0.75em;
   }
@@ -113,5 +113,68 @@
   }
   &__feedback {
     display: none;
+  }
+}
+@media #{$smart} {
+  .form {
+    // &--present {
+    //   text-align: center;
+    //   max-width: 405px;
+    //   margin: 0 auto;
+    // }
+    &-wrap {
+      padding: 26px $smart-padding 29px;
+    }
+    &-title {
+      font-size: 16px;
+      line-height: 2;
+      margin: 0 0 40px;
+    }
+    &__field {
+      margin-bottom: 25px;
+      padding-top: 12px;
+      &:last-of-type {
+        margin-bottom: 50px;
+      }
+      font-size: 12px;
+    }
+    // &__field-wrap {
+    //   display: flex;
+    //   justify-content: space-between;
+    // }
+    // &__field--present {
+    //   margin-bottom: 25px;
+    //   padding-top: 15px;
+    //   font-size: 14px;
+    //   &:last-of-type {
+    //     margin: 0 0 25px;
+    //   }
+    // }
+    // &__field--short {
+    //   width: 50%;
+    //   max-width: 180px;
+    // }
+    &__input {
+      height: 20px;
+      padding: 3px 5px;
+      border-bottom-width: 2px;
+    }
+    // &__input--present {
+    //   height: 29px;
+    //   border-bottom-color: $col-gold;
+    //   padding: 6px 0;
+    //   text-align: left;
+    //   color: $col-gold;
+    // }
+    &__label {
+      top: 1.2em;
+    }
+    // &__label--present {
+    //   color: $col-gold;
+    //   text-align: left;
+    // }
+    &__text-invalid {
+      font-size: 0.75em;
+    }
   }
 }

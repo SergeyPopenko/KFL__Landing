@@ -33,3 +33,24 @@
 .btn-close {
 
 }
+@media #{$smart} {
+  .btn {
+    font-size: 16px;
+    // &--red {
+    //   min-width: 220px;
+    //   background: #c90202;
+    //   padding: 18px 15px;
+    //   &:hover,
+    //   &:active {
+    //     background: #830202;
+    //   }
+    // }
+    &--orange {
+      min-width: 140px;
+      padding: 12px 15px;
+    }
+    &--brightness {
+      background: #ff6600;
+    }
+  }
+}
