@@ -12,6 +12,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  @media #{$smart} {
+    padding: 0;
+  }
 }
 
 @mixin fieldset($margin: 0, $padding: 0) {
@@ -29,6 +32,10 @@
   vertical-align: middle;
   font-weight: 700;
   letter-spacing: $letter-spacing-200;
+  @media #{$smart} {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 @mixin logo($width: 200px) {

@@ -2,11 +2,13 @@
 if ($(window).innerWidth > 767) {
   var scale = 15,
       drag = true,
-      scroll = true;
+      scroll = true,
+      markerScaledSize = 80;
 } else {
   scale = 13;
   drag = false;
   scroll = false;
+  markerScaledSize = 40;
 }
 var style1 = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"lightness":"-3"},{"saturation":"-47"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"saturation":"0"},{"lightness":"0"}]},{"featureType":"road","elementType":"labels.text","stylers":[{"lightness":"-29"},{"weight":"0.01"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#aaaaaa"},{"visibility":"on"}]}],
   style2 = [
@@ -185,10 +187,11 @@ var marker = new google.maps.Marker({
   position: {lat: 39.966934, lng: -75.173963},
   map: map,
   icon: {
-  url: "img/map/marker.svg",
-  size: new google.maps.Size(80, 80),
-  origin: new google.maps.Point(0, 0),
-  anchor: new google.maps.Point(40, 80)
+    url: "img/map/marker.svg",
+    size: new google.maps.Size(80, 80),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(40, 80),
+    scaledSize: new google.maps.Size(markerScaledSize, markerScaledSize)
   },
   title: 'KFL web design studia',
   zIndex: 1000
