@@ -33,3 +33,15 @@
 .btn-close {
 
 }
+@media #{$smart} {
+  .btn {
+    font-size: 16px;
+    padding: 12px 15px;
+    &--red {
+      min-width: 160px;
+    }
+    &--orange {
+      min-width: 140px;
+    }
+  }
+}

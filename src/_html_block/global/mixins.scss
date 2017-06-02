@@ -6,6 +6,9 @@
   line-height: 1;
   color: $col-main-title;
   text-transform: uppercase;
+  @media #{$smart} {
+    font-size: 30px;
+  }
 }
 @mixin checker-title($margin: 0, $color: $col-red) {
   font-weight: 700;
@@ -30,6 +33,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  @media #{$smart} {
+    padding: 0;
+  }
 }
 
 @mixin fieldset($margin: 0, $padding: 0) {
@@ -46,6 +52,10 @@
   vertical-align: middle;
   font-weight: 700;
   letter-spacing: $letter-spacing-200;
+  @media #{$smart} {
+    font-size: 16px;
+    letter-spacing: $letter-spacing-50;
+  }
 }
 
 @mixin logo($width: 200px) {
@@ -56,15 +66,22 @@
     height: auto;
     max-width: 100%;
   }
+  @media #{$smart} {
+    width: 100px;
+  }
 }
 
 @mixin promo-img($zindex: 1, $opacity: 0) {
   position: absolute;
   width: 100%;
-  height: auto;
   top: 0;
   left: 0;
   z-index: $zindex;
   opacity: $opacity;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 

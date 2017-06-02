@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+
+  font-size: $htmlSize;
+}
+body {
+  background: $bg;
+
+  font: 1rem/1 "Evolventa", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  color: $col-333;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  @include wrapper;
+}

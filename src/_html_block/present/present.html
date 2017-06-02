@@ -1,14 +1,27 @@
 <section class="present">
   <h2 class="present__title">Presentation one of our works</h2>
   <div class="present__animation">
+    <h2 class="present__animation-title">Outstanding decisions</h2>
     <figure class="present__img">
-      <img class="present__img-1" src="img/present/night.jpg" alt="Night present">
-      <img class="present__img-2" src="img/present/light.jpg" alt="NIght light present">
-      <img class="present__img-3" src="img/present/day.jpg" alt="Day present">
+      <picture class="present__img-1">
+        <source srcset="img/present/night320.jpg" media="(max-width: 767px)">
+        <img src="img/present/night.jpg" alt="Night present">
+      </picture>
+      <picture class="present__img-2">
+        <source srcset="img/present/light320.jpg" media="(max-width: 767px)">
+        <img src="img/present/light.jpg" alt="NIght light present">
+      </picture>
+      <picture class="present__img-3">
+        <source srcset="img/present/day320.jpg" media="(max-width: 767px)">
+        <img src="img/present/day.jpg" alt="Day present">
+      </picture>
     </figure>
   </div>
   <div class="present__form">
-    <blockquote class="present__form-descr">Would you like an item that will set you apart from the rest? Opportunity is knocking...</blockquote>
+    <p class="present__form-descr">
+      First step to a growing business
+      <span>creative website from 5000</span>
+    </p>
     <form action="/echo" method="POST" class="form form--present">
       <div class="form__field-wrap">
         <fieldset class="form__field form__field--present form__field--short">
@@ -20,7 +33,7 @@
           <label class="form__label form__label--present" for="present-email">Your email*</label>
         </fieldset>
       </div>
-      <fieldset class="form__field form__field--present">
+      <fieldset class="form__field form__field--present form__field-textarea--present">
         <input type="text" name="message" id="present-message" class="form__input form__input--present" autocomplete="on">
         <label class="form__label form__label--present" for="present-message">Your message</label>
       </fieldset>

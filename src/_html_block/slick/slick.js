@@ -4,6 +4,15 @@ if ($(".reviews").length) {
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: $(".reviews__button--prev"),
-    nextArrow: $(".reviews__button--next")
+    nextArrow: $(".reviews__button--next"),
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      }
+    ]
   });
 }

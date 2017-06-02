@@ -1,6 +1,5 @@
 .present {
-  background: #1a1e27 no-repeat 50% 50%;
-  background-size: cover;
+  background: #1a1e27;
   display: flex;
   justify-content: flex-end;
   position: relative;
@@ -23,14 +22,19 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.6;
-    letter-spacing: $letter-spacing-50;
+    letter-spacing: $letter-spacing-25;
     color: $col-gold;
-    quotes: "\0022" "\0022";
-    &::before {
-      content: open-quote;
-    }
-    &::after {
-      content: close-quote;
+    // quotes: "\0022" "\0022";
+    // &::before {
+    //   content: open-quote;
+    // }
+    // &::after {
+    //   content: close-quote;
+    // }
+    span {
+      display: block;
+      font-size: 0.8em;
+      font-weight: 400;
     }
   }
   &__animation {
@@ -39,6 +43,9 @@
     position: absolute;
     left: 0;
     top: 0;
+  }
+  &__animation-title {
+    display: none;
   }
   &__img {
     height: 100%;
@@ -51,8 +58,12 @@
   &__img-2,
   &__img-3 {
     height: 100%;
-    display: block;
     width: auto;
+    img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
   }
   &__img-2,
   &__img-3 {
@@ -110,5 +121,69 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@media #{$smart} {
+  .present {
+    background: $col-fff;
+    display: block;
+    &__animation {
+      position: relative;
+      width: auto;
+      height: auto;
+      top: auto;
+      left: auto;
+    }
+
+    &__animation-title {
+      margin: 0;
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 22px;
+      left: 0;
+      z-index: 50;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 1;
+      color: $col-fff;
+      letter-spacing: $letter-spacing-50;
+      text-align: center;
+      padding: 0 $smart-padding;
+    }
+    &__img-1,
+    &__img-2,
+    &__img-3 {
+      height: auto;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__form {
+      position: relative;
+      z-index: 100;
+      width: auto;
+      margin: -20px $smart-padding 0;
+      padding: 28px 0 30px;
+      background: #f3f4f5;
+      transition: 2s;
+    }
+    &__form-animation {
+      margin-top: -200px;
+    }
+    &__form-descr {
+      margin: 0 0 20px;
+
+      font-size: 15px;
+      line-height: 1.4;
+      color: $col-333;
+      text-transform: uppercase;
+      span {
+        text-transform: none;
+        font-size: 12px;
+      }
+    }
   }
 }
