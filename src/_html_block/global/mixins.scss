@@ -37,6 +37,7 @@
   letter-spacing: $letter-spacing-200;
   @media #{$smart} {
     font-size: 16px;
+    letter-spacing: $letter-spacing-50;
   }
 }
 
