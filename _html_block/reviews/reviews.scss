@@ -1,0 +1,194 @@
+.reviews {
+  position: relative;
+
+  padding: 38px 40px 100px;
+
+  background: $bg-gray;
+  &__title {
+    position: relative;
+    z-index: 10;
+
+    text-align: right;
+
+    @include main-title(0 15px -87px);
+  }
+  &__slider {
+    position: relative;
+  }
+  &__slide {
+    position: relative;
+
+    display: flex;
+    padding: 87px 65px 0;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 350px;
+      height: 440px;
+
+      background: linear-gradient(-45deg, #feb389, #feedd6);
+
+      content: "";
+      transition: 1s;
+      transform-origin: 0 50%;
+      .slick-active & {
+        transform: perspective(1000px) rotateY(25deg);
+      }
+    }
+  }
+  &__header {
+    position: absolute;
+
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+  }
+  &__slide-descr {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 1;
+    color: #c39804;
+    text-decoration: none;
+    letter-spacing: $letter-spacing-50;
+  }
+  &__link--info {
+    display: none;
+  }
+  &__info {
+    position: relative;
+    z-index: 10;
+
+    width: 33.5%;
+    margin: 0 40px 0 0;
+
+    flex-shrink: 0;
+  }
+  &__img {
+    width: 100%;
+    margin: 0;
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__quote {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 1.33;
+    text-align: left;
+  }
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    padding: 0;
+
+    border: 0;
+    background: none;
+
+    transform-origin: 50% 50%;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      fill: $bg-blue;
+    }
+  }
+  &__button--next {
+    right: 0;
+
+    transform: scale(-1);
+  }
+  &__button--prev {
+    left: 0;
+  }
+}
+@media #{$smart} {
+  .reviews {
+    padding: 38px $smart-padding 45px;
+
+    background: $col-fff;
+    &__title {
+      margin: 0 0 -10px;
+    }
+    &__slide {
+      display: block;
+      padding: 20px 0 0;
+      &::after {
+        width: 165px;
+        height: 160px;
+        .slick-active & {
+          transform: perspective(1000px) rotateY(32deg);
+        }
+      }
+    }
+    &__slide-descr {
+      display: block;
+      margin: 0 0 30px;
+    }
+    &__link {
+      display: none;
+
+      font-size: 11px;
+      color: #dcbc76;
+    }
+    &__header {
+      position: relative;
+      z-index: 10;
+
+      height: auto;
+      margin: 0 0 10px;
+      visibility: visible;
+      clip: auto;
+
+      font-size: 12px;
+      line-height: 1.17;
+      text-align: right;
+      letter-spacing: $letter-spacing-50;
+    }
+    &__info {
+      display: flex;
+      width: auto;
+      margin: 0 0 15px;
+
+      align-items: center;
+    }
+    &__link--info {
+      display: block;
+
+      white-space: nowrap;
+
+      flex-shrink: 0;
+    }
+    &__img {
+      max-width: 43%;
+      min-height: 120px;
+      margin: 0 13px 0 auto;
+    }
+    &__quote {
+      font-size: 11px;
+      line-height: 1.36;
+    }
+    &__button {
+      display: none;
+    }
+  }
+}

@@ -35,14 +35,15 @@
   }
   &__img {
     position: relative;
+
     margin: 0;
   }
   &__img-1 {
     position: relative;
     img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
   }
   &__img-2 {
@@ -56,22 +57,28 @@
   }
   &__sect {
     position: absolute;
-    right: 12%;
     top: 40%;
-    perspective: 1000px;
-    text-align: center;
+    right: 12%;
     z-index: 100;
+
+    text-align: center;
+
     transition: .3s;
+
+    perspective: 1000px;
     transform-style: preserve-3d;
   }
   &__slogan {
     margin: 0;
-    font-weight: 700;
-    letter-spacing: $letter-spacing-50;
+
     font-size: 45px;
+    font-weight: 700;
     line-height: 1.24;
     color: #bbbec5;
+    letter-spacing: $letter-spacing-50;
+
     transform-origin: 50% 0;
+
     backface-visibility: hidden;
   }
   &__slogan-1 {
@@ -87,29 +94,35 @@
     position: absolute;
     top: 100%;
     left: 0;
+
     width: 100%;
-    transform-origin: 50% 0;
-    backface-visibility: hidden;
+
     transform: rotateX(-90deg);
+    transform-origin: 50% 0;
+
+    backface-visibility: hidden;
   }
   &__title {
     margin: 0;
-    font-weight: 700;
+
     font-size: 55px;
+    font-weight: 700;
     line-height: 1;
     color: #5c616e;
-    text-transform: uppercase;
     letter-spacing: $letter-spacing-50;
+    text-transform: uppercase;
   }
   &__info-text {
     margin: 0 0 60px;
-    letter-spacing: $letter-spacing-50;
+
     font-size: 32px;
     line-height: 1.75;
     color: $col-333;
+    letter-spacing: $letter-spacing-50;
   }
   &__btn {
     opacity: 0;
+
     transform: translateY(30px);
   }
 }
@@ -140,21 +153,25 @@
 }
 @keyframes promoInfo {
   0 {
-    transform: rotateX(-90deg);
     top: 100%;
+
+    transform: rotateX(-90deg);
   }
   100% {
-    transform: rotateX(0);
     top: 0;
+
+    transform: rotateX(0);
   }
 }
 @keyframes promoBtn {
   0 {
     opacity: 0;
+
     transform: translateY(30px);
   }
   100% {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
@@ -182,28 +199,32 @@
       // }
       .promo__img {
         &::after {
-          background: rgba(255,255,255,0.8)
+          background: rgba(255,255,255,.8);
         }
       }
     }
     &__img {
       &::after {
-        content: "";
         position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 30;
+
         width: 100%;
         height: 100%;
+
         background: none;
-        left: 0;
-        top: 0;
-        z-index: 30;
+
+        content: "";
         transition: .5s 2s;
       }
     }
     &__sect {
-      width: 100%;
-      left: 0;
-      right: auto;
       top: 68px;
+      right: auto;
+      left: 0;
+
+      width: 100%;
     }
     &__slogan {
       font-size: 30px;
@@ -212,7 +233,7 @@
     }
     &__title {
       font-size: 30px;
-      color: #0066cc;
+      color: #06c;
       letter-spacing: $letter-spacing-100;
     }
     &__info {
@@ -220,11 +241,13 @@
     }
     &__info-text {
       margin: 0 0 90px;
+
       font-size: 18px;
       line-height: 1.56;
     }
     &__btn {
       opacity: 0;
+
       transform: translateY(30px);
     }
   }

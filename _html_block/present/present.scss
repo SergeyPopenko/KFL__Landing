@@ -1,16 +1,20 @@
 .present {
-  background: #1a1e27;
-  display: flex;
-  justify-content: flex-end;
   position: relative;
+
+  display: flex;
+
+  background: #1a1e27;
+
+  justify-content: flex-end;
   &__title {
     position: absolute;
-    clip: rect(0,0,0,0);
-    overflow: hidden;
     z-index: -1;
-    visibility: hidden;
-    height: 0;
+
     width: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
   }
   &__form {
     width: 50%;
@@ -18,12 +22,13 @@
   }
   &__form-descr {
     margin: 0 0 60px;
-    text-align: center;
-    font-weight: 700;
+
     font-size: 20px;
+    font-weight: 700;
     line-height: 1.6;
-    letter-spacing: $letter-spacing-25;
     color: $col-gold;
+    text-align: center;
+    letter-spacing: $letter-spacing-25;
     // quotes: "\0022" "\0022";
     // &::before {
     //   content: open-quote;
@@ -33,36 +38,39 @@
     // }
     span {
       display: block;
-      font-size: 0.8em;
+
+      font-size: .8em;
       font-weight: 400;
     }
   }
   &__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+
     width: 50%;
     height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
   }
   &__animation-title {
     display: none;
   }
   &__img {
-    height: 100%;
-    width: 100%;
-    margin: 0;
     position: relative;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
     overflow: hidden;
   }
   &__img-1,
   &__img-2,
   &__img-3 {
-    height: 100%;
     width: auto;
+    height: 100%;
     img {
-      height: 100%;
-      width: auto;
       display: block;
+      width: auto;
+      height: 100%;
     }
   }
   &__img-2,
@@ -70,7 +78,9 @@
     position: absolute;
     top: 0;
     left: 0;
+
     opacity: 0;
+
     transition: .5s;
   }
   &__img-2 {
@@ -125,37 +135,41 @@
 }
 @media #{$smart} {
   .present {
-    background: $col-fff;
     display: block;
+
+    background: $col-fff;
     &__animation {
       position: relative;
-      width: auto;
-      height: auto;
       top: auto;
       left: auto;
+
+      width: auto;
+      height: auto;
     }
 
     &__animation-title {
-      margin: 0;
-      display: block;
       position: absolute;
-      width: 100%;
       top: 22px;
       left: 0;
       z-index: 50;
-      text-transform: uppercase;
+
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0 $smart-padding;
+
       font-size: 20px;
       line-height: 1;
       color: $col-fff;
-      letter-spacing: $letter-spacing-50;
       text-align: center;
-      padding: 0 $smart-padding;
+      letter-spacing: $letter-spacing-50;
+      text-transform: uppercase;
     }
     &__img-1,
     &__img-2,
     &__img-3 {
-      height: auto;
       width: 100%;
+      height: auto;
       img {
         width: 100%;
         height: auto;
@@ -164,10 +178,13 @@
     &__form {
       position: relative;
       z-index: 100;
+
       width: auto;
       margin: -20px $smart-padding 0;
       padding: 28px 0 30px;
+
       background: #f3f4f5;
+
       transition: 2s;
     }
     &__form-animation {
@@ -181,8 +198,8 @@
       color: $col-333;
       text-transform: uppercase;
       span {
-        text-transform: none;
         font-size: 12px;
+        text-transform: none;
       }
     }
   }
