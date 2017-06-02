@@ -7,6 +7,24 @@
   color: $col-main-title;
   text-transform: uppercase;
 }
+@mixin checker-title($margin: 0, $color: $col-red) {
+  font-weight: 700;
+  margin: $margin;
+  letter-spacing: $letter-spacing--10;
+  font-size: 44px;
+  line-height: 1;
+  color: $color;
+  text-transform: uppercase;
+  text-align: center;
+}
+@mixin checker-text($margin: 0, $color: $col-333) {
+  font-weight: 500;
+  margin: $margin;
+  letter-spacing: $letter-spacing-50;
+  font-size: 22px;
+  line-height: 1.68;
+  color: $color;
+}
 
 @mixin wrapper {
   max-width: 1200px;
@@ -19,7 +37,6 @@
   padding: $padding;
   border: 0;
 }
-
 @mixin phone($color: $col-333) {
   text-decoration: none;
   color: $color;
