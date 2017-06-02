@@ -1,0 +1,74 @@
+@mixin main-title($margin: 0) {
+  margin: $margin;
+
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1;
+  color: $col-main-title;
+  letter-spacing: $letter-spacing-50;
+  text-transform: uppercase;
+  @media #{$smart} {
+    font-size: 30px;
+  }
+}
+
+@mixin wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media #{$smart} {
+    padding: 0;
+  }
+}
+
+@mixin fieldset($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+
+  border: 0;
+}
+
+@mixin phone($color: $col-333) {
+  display: inline-block;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  color: $color;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: $letter-spacing-200;
+  @media #{$smart} {
+    font-size: 16px;
+    letter-spacing: $letter-spacing-50;
+  }
+}
+
+@mixin logo($width: 200px) {
+  width: $width;
+  margin: 0;
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  @media #{$smart} {
+    width: 100px;
+  }
+}
+
+@mixin promo-img($zindex: 1, $opacity: 0) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex;
+
+  width: 100%;
+
+  opacity: $opacity;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

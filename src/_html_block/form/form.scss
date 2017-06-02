@@ -24,12 +24,12 @@
   &__field {
     position: relative;
     @include fieldset(0 0 30px, 20px 0 0);
-    &:last-of-type {
-      margin: 0 0 70px;
-    }
     font-size: 18px;
     line-height: 1;
     font-weight: 700;
+  }
+  &__field-textarea {
+    margin: 0 0 70px;
   }
   &__field-wrap {
     display: flex;
@@ -39,9 +39,9 @@
     margin-bottom: 25px;
     padding-top: 15px;
     font-size: 14px;
-    &:last-of-type {
-      margin: 0 0 25px;
-    }
+  }
+  &__field-textarea--present {
+    margin: 0 0 25px;
   }
   &__field--short {
     width: 50%;
@@ -96,7 +96,7 @@
     color: $col-gold;
     text-align: left;
   }
-  &__label--focus {
+  .form__label--focus {
     top: 0;
     font-size: 0.75em;
   }
@@ -113,5 +113,63 @@
   }
   &__feedback {
     display: none;
+  }
+}
+@media #{$smart} {
+  .form {
+    &--present {
+      padding: 0 10px;
+    }
+    &-wrap {
+      padding: 26px $smart-padding 29px;
+    }
+    &-title {
+      font-size: 16px;
+      line-height: 2;
+      margin: 0 0 40px;
+    }
+    &__field {
+      margin-bottom: 25px;
+      padding-top: 12px;
+      font-size: 12px;
+    }
+    &__field-textarea {
+      margin-bottom: 50px;
+    }
+    &__field--present {
+      margin-bottom: 14px;
+      padding-top: 10px;
+      font-size: 10px;
+    }
+    &__field-textarea--present {
+      margin: 0 0 28px;
+    }
+    &__field--short {
+      width: 45%;
+      max-width: 100%;
+    }
+    &__input {
+      height: 20px;
+      padding: 3px 5px;
+      border-bottom-width: 2px;
+    }
+    &__input--present {
+      height: 19px;
+      border-bottom-color: #bbbec5;
+      padding: 6px 0;
+      text-align: left;
+      color: $col-333;
+    }
+    &__label {
+      top: 1.2em;
+    }
+    &__label--present {
+      color: $col-333;
+    }
+    &__text-invalid {
+      font-size: 0.75em;
+      top: 4em;
+      bottom: auto;
+    }
   }
 }

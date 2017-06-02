@@ -39,8 +39,11 @@
   }
   &__img-1 {
     position: relative;
-    width: 100%;
-    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
   &__img-2 {
     @include promo-img(1);
@@ -67,7 +70,7 @@
     letter-spacing: $letter-spacing-50;
     font-size: 45px;
     line-height: 1.24;
-    color: $col-333;
+    color: #bbbec5;
     transform-origin: 50% 0;
     backface-visibility: hidden;
   }
@@ -119,14 +122,14 @@
     opacity: 1;
   }
 }
-@keyframes promoStairsOff {
-  0 {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+// @keyframes promoStairsOff {
+//   0 {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
 @keyframes promoSlogan {
   0 {
     transform: rotateX(0) translateY(0);
@@ -153,5 +156,76 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media #{$smart} {
+  .promo {
+    &__animation {
+      .promo__img-2 {
+        animation: promoStairsOn .6s linear forwards;
+      }
+      .promo__img-3 {
+        animation: promoStairsOn .6s linear .6s forwards;
+      }
+      .promo__img-4 {
+        animation: promoStairsOn .6s linear 1.2s forwards;
+      }
+
+      // .promo__slogan {
+      //   animation: promoSlogan .5s linear both 2s;
+      // }
+      // .promo__info {
+      //   animation: promoInfo .5s linear both 2s;
+      // }
+      // .promo__btn {
+      //   animation: promoBtn .5s linear both 2.5s;
+      // }
+      .promo__img {
+        &::after {
+          background: rgba(255,255,255,0.8)
+        }
+      }
+    }
+    &__img {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: none;
+        left: 0;
+        top: 0;
+        z-index: 30;
+        transition: .5s 2s;
+      }
+    }
+    &__sect {
+      width: 100%;
+      left: 0;
+      right: auto;
+      top: 68px;
+    }
+    &__slogan {
+      font-size: 30px;
+      line-height: 1.87;
+      color: $col-333;
+    }
+    &__title {
+      font-size: 30px;
+      color: #0066cc;
+      letter-spacing: $letter-spacing-100;
+    }
+    &__info {
+      margin-top: 112px;
+    }
+    &__info-text {
+      margin: 0 0 90px;
+      font-size: 18px;
+      line-height: 1.56;
+    }
+    &__btn {
+      opacity: 0;
+      transform: translateY(30px);
+    }
   }
 }

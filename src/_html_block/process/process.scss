@@ -138,3 +138,40 @@
     }
   }
 }
+@media #{$smart} {
+  .process {
+    padding: 37px $smart-padding 30px;
+    &__title {
+      margin: 0 0 26px;
+    }
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 48.5%;
+      min-height: 190px;
+      padding: 30px 0 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+      margin-bottom: 20px;
+      &::after {
+        opacity: 1;
+      }
+    }
+    &__item-title {
+      font-size: 16px;
+      line-height: 1.88;
+      margin: 0 0 6px;
+    }
+    &__descr {
+      font-size: 11px;
+      line-height: 1.36;
+      padding: 0 7px;
+    }
+    &__item--2 {
+      margin-top: 40px;
+    }
+    &__item--3 {
+      margin-top: -40px;
+    }
+  }
+}
