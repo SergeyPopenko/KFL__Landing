@@ -6,15 +6,17 @@
   line-height: 1;
   color: $col-main-title;
   text-transform: uppercase;
+  @media #{$tablet} {
+    font-size: 80px;
+  }
   @media #{$smart} {
     font-size: 30px;
   }
 }
 
 @mixin wrapper {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
-  padding: 0 15px;
   @media #{$smart} {
     padding: 0;
   }
@@ -35,6 +37,9 @@
   vertical-align: middle;
   font-weight: 700;
   letter-spacing: $letter-spacing-200;
+  @media #{$tablet} {
+    font-size: 18px;
+  }
   @media #{$smart} {
     font-size: 16px;
     letter-spacing: $letter-spacing-50;
@@ -48,6 +53,9 @@
     display: block;
     height: auto;
     max-width: 100%;
+  }
+  @media #{$tablet} {
+    width: 150px;
   }
   @media #{$smart} {
     width: 100px;

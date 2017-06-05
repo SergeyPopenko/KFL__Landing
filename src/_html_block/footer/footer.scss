@@ -18,6 +18,15 @@
     margin: 0 auto;
   }
 }
+@media #{$tablet} {
+  .footer {
+    min-height: 60px;
+    padding: 0 $tablet-padding;
+    &__address {
+      font-size: 14px;
+    }
+  }
+}
 @media #{$smart} {
   .footer {
     padding: 12px $smart-padding 5px;
