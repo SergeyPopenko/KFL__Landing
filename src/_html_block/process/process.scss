@@ -138,13 +138,47 @@
     }
   }
 }
+@media #{$tablet} {
+  .process {
+    background-image: url(#{$img-path}/process/bg768.jpg);
+    padding: 20px 26px 50px;
+    &__title {
+      margin: 0 0 30px 45px;
+    }
+    &__item {
+      min-height: 156px;
+      padding: 60px 0 5px;
+    }
+    &__item--low {
+      .process--active & {
+        margin-top: 21px;
+        padding-top: 40px;
+      }
+    }
+    &__item-title {
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+    &__descr {
+      font-size: 10px;
+      line-height: 1.2;
+      padding: 0 6px;
+    }
+    &__order {
+      font-size: 200px;
+      line-height: 150px;
+    }
+  }
+}
 @media #{$smart} {
   .process {
     padding: 37px $smart-padding 30px;
+    background-image: url(#{$img-path}/process/bg480.jpg);
     &__title {
       margin: 0 0 26px;
     }
     &__list {
+      max-width: 100%;
       flex-wrap: wrap;
     }
     &__item {

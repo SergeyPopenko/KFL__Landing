@@ -122,14 +122,6 @@
     opacity: 1;
   }
 }
-// @keyframes promoStairsOff {
-//   0 {
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//   }
-// }
 @keyframes promoSlogan {
   0 {
     transform: rotateX(0) translateY(0);
@@ -158,6 +150,24 @@
     transform: translateY(0);
   }
 }
+@media (max-width: 990px) {
+  .promo {
+    &__sect {
+      right: 5%;
+      top: 30%;
+    }
+    &__slogan {
+      font-size: 40px;
+    }
+    &__title {
+      font-size: 50px;
+    }
+    &__info-text {
+      margin: 0 0 40px;
+      font-size: 28px;
+    }
+  }
+}
 @media #{$smart} {
   .promo {
     &__animation {
@@ -170,16 +180,6 @@
       .promo__img-4 {
         animation: promoStairsOn .6s linear 1.2s forwards;
       }
-
-      // .promo__slogan {
-      //   animation: promoSlogan .5s linear both 2s;
-      // }
-      // .promo__info {
-      //   animation: promoInfo .5s linear both 2s;
-      // }
-      // .promo__btn {
-      //   animation: promoBtn .5s linear both 2.5s;
-      // }
       .promo__img {
         &::after {
           background: rgba(255,255,255,0.8)
@@ -199,12 +199,6 @@
         transition: .5s 2s;
       }
     }
-    &__sect {
-      width: 100%;
-      left: 0;
-      right: auto;
-      top: 68px;
-    }
     &__slogan {
       font-size: 30px;
       line-height: 1.87;
@@ -215,17 +209,45 @@
       color: #0066cc;
       letter-spacing: $letter-spacing-100;
     }
-    &__info {
-      margin-top: 112px;
-    }
     &__info-text {
-      margin: 0 0 90px;
       font-size: 18px;
       line-height: 1.56;
     }
     &__btn {
       opacity: 0;
       transform: translateY(30px);
+    }
+  }
+}
+
+@media #{$smart} and (orientation: portrait) {
+  .promo {
+    &__sect {
+      width: 100%;
+      left: 0;
+      right: auto;
+      top: 68px;
+    }
+    &__info {
+      margin-top: 112px;
+    }
+    &__info-text {
+      margin: 0 0 90px;
+    }
+  }
+}
+@media #{$smart} and (orientation: landscape) {
+  .promo {
+    &__sect {
+      width: 60%;
+      right: 0;
+      top: 20px;
+    }
+    &__info {
+      margin-top: 50px;
+    }
+    &__info-text {
+      margin: 0 0 40px;
     }
   }
 }

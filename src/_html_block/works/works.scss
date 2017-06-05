@@ -63,6 +63,11 @@
     transform: translateY(0);
   }
 }
+@media #{$tablet} {
+  &__title {
+    margin-bottom: -20px;
+  }
+}
 @media #{$smart} {
   .works {
     padding: 36px $smart-padding 33px;
@@ -84,6 +89,8 @@
       transform: none;
     }
     &__link {
+      margin: 0 auto;
+      max-width: 450px;
       &:hover {
         box-shadow: none;
         transform: none;
