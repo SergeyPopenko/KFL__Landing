@@ -19,3 +19,8 @@
     color: $col-fff;
   }
 }
+@media #{$tablet} {
+  .header {
+    padding: 0 $tablet-padding;
+  }
+}
