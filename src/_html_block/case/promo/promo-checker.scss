@@ -3,6 +3,14 @@
   padding: 225px 65px 0;
   &__title{
     @include checker-title (0 0 60px 0);
+
+  }
+  &__title-bg{
+    @include checker-title-bg;
+  }
+  &__title-text{
+position: relative;
+      z-index: 4;
   }
   &__title--white{
     margin: 0 0 20px 0;
@@ -10,9 +18,11 @@
   }
   &__text{
     @include checker-text;
+
   }
   &__text--white{
     color:$col-fff;
+    text-align: left;
 
   }
 

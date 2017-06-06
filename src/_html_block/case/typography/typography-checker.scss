@@ -1,10 +1,18 @@
-.typography {
+.typography-checker {
+ padding: 0 0 75px 0;
   &__container{
   display: flex;
   justify-content: space-around;
 }
   &__title{
     @include checker-title (0 0 70px 0);
+  }
+  &__title-bg{
+    @include checker-title-bg;
+  }
+  &__title-text{
+position: relative;
+      z-index: 4;
   }
   &__item{
     width: 33.3333%;
@@ -24,7 +32,7 @@
     margin: 0 0 50px 0;
   }
   &__descr{
-     @include checker-text(0 0 20px 0, $col-text--dark-gray);
+     @include checker-text(0, $col-text--dark-gray);
     font-weight: 700;
   }
 
