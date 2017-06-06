@@ -13,6 +13,41 @@
     font-size: 30px;
   }
 }
+@mixin checker-title($margin: 0, $color: $col-red) {
+  font-weight: 500;
+  margin: $margin;
+  letter-spacing: $letter-spacing--10;
+  font-size: 44px;
+  line-height: 1;
+  color: $color;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+
+}
+@mixin checker-title-bg($color: $col-title-bg) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+z-index: 2;
+  font-weight: 700;
+  font-size: 122px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: $color;
+  text-align: center;
+}
+@mixin checker-text($margin: 0, $color: $col-333) {
+  font-weight: 500;
+  margin: $margin;
+  letter-spacing: $letter-spacing-50;
+  font-size: 22px;
+  line-height: 1.68;
+  color: $color;
+  text-align: center;
+}
 
 @mixin wrapper {
   max-width: 1170px;
@@ -27,7 +62,6 @@
   padding: $padding;
   border: 0;
 }
-
 @mixin phone($color: $col-333) {
   text-decoration: none;
   color: $color;

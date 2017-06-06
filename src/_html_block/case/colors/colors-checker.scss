@@ -1,0 +1,63 @@
+.colors-checker {
+  background: $bg-gray url(#{$img-path}/case/colors/colors__bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  padding: 0 0 60px 0;
+  &__container{
+  display: flex;
+  justify-content: space-around;
+}
+  &__title{
+    @include checker-title (0 0 70px 0);
+  }
+  &__title-bg{
+    @include checker-title-bg;
+  }
+  &__title-text{
+position: relative;
+      z-index: 4;
+  }
+    &__col{
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    text-align: center;
+    font-size: 0;
+
+
+
+  }
+  &__col--white{
+    background: #ffffff;
+    box-shadow: 14px 10px 17px 4px rgba(0,0,0,.1);
+  }
+   &__col--light-gray{
+    background: #cccccc;
+        box-shadow: 14px 10px 17px 4px rgba(0,0,0,.2);
+
+  }
+   &__col--gray{
+    background: #999999;
+        box-shadow: 14px 10px 17px 4px rgba(0,0,0,.3);
+
+  }
+   &__col--dark-gray{
+    background: #333333;
+        box-shadow: 14px 10px 17px 4px rgba(0,0,0,.4);
+
+  }
+   &__col--red{
+    background: #cc0033;
+    box-shadow: 14px 10px 17px 4px rgba(204,0,51,.3);
+  }
+
+   &__descr{
+     @include checker-text(40px 0 0 0, $col-text--light-gray);
+
+
+  }
+
+}
+

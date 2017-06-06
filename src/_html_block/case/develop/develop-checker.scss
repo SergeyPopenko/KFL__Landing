@@ -1,0 +1,19 @@
+.develop-checker {
+  background: $bg-gray url(#{$img-path}/case/develop/develop__bg.jpg) no-repeat 50% 50%;
+  padding: 0 0 59% 0;
+  &__title{
+    @include checker-title (0 0 60px 0);
+
+  }
+  &__title-bg{
+    @include checker-title-bg;
+  }
+  &__title-text{
+position: relative;
+      z-index: 4;
+  }
+  &__text{
+    @include checker-text (0 auto);
+    max-width: 680px;
+}
+}

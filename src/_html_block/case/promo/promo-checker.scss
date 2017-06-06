@@ -1,0 +1,40 @@
+.promo-checker {
+  background: $bg-gray url(#{$img-path}/case/promo/promo-checker__bg.jpg) no-repeat 50% 0;
+  padding: 225px 65px 0;
+  &__title{
+    @include checker-title (0 0 60px 0);
+
+  }
+  &__title-bg{
+    @include checker-title-bg;
+  }
+  &__title-text{
+position: relative;
+      z-index: 4;
+  }
+  &__title--white{
+    margin: 0 0 20px 0;
+    color:$col-fff;
+  }
+  &__text{
+    @include checker-text;
+
+  }
+  &__text--white{
+    color:$col-fff;
+    text-align: left;
+
+  }
+
+  &__descr{
+  width: 50%;
+  margin: 0 0 22% 0;
+  }
+  &__task{
+    max-width: 530px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 10% 0;
+  }
+}
+
