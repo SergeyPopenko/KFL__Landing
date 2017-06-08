@@ -1,20 +1,26 @@
 .works {
   padding: 87px 0 59px;
+
   background: $bg-gray;
   &__title {
-    @include main-title(0 0 -32px 60px);
     position: relative;
     z-index: 200;
+
+    @include main-title(0 0 -32px 60px);
   }
   &__list {
     position: relative;
+
     display: flex;
+
     justify-content: space-between;
   }
   &__item {
-    width: 33%;
     position: relative;
     z-index: 1;
+
+    width: 33%;
+
     transition: z-index .5s .1s;
     &:hover {
       z-index: 100;
@@ -35,14 +41,16 @@
   &__link {
     display: block;
     overflow: hidden;
+
     transition: .5s;
     img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
     }
     &:hover {
-      box-shadow: 0 0 30px rgba(0,0,0,0.8);
+      box-shadow: 0 0 30px rgba(0,0,0,.8);
+
       transform: scale(1.05);
     }
   }
@@ -71,12 +79,13 @@
 @media #{$smart} {
   .works {
     padding: 36px $smart-padding 33px;
+
     background: $col-fff;
     &__title {
-      margin: 0 0 12px
+      margin: 0 0 12px;
     }
     &__list {
-     display: block;
+      display: block;
     }
     &__item {
       width: auto;
@@ -89,10 +98,11 @@
       transform: none;
     }
     &__link {
-      margin: 0 auto;
       max-width: 450px;
+      margin: 0 auto;
       &:hover {
         box-shadow: none;
+
         transform: none;
       }
     }

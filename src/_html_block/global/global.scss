@@ -1,14 +1,16 @@
 html {
-  font-size: $htmlSize;
   box-sizing: border-box;
+
+  font-size: $htmlSize;
 }
-body { 
+body {
+  background: $bg;
+
   font: 1rem/1 "Evolventa", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
   color: $col-333;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $bg;
 }
 
 *,

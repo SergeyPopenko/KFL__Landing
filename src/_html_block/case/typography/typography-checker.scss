@@ -1,48 +1,49 @@
 .typography-checker {
- padding: 0 0 75px 0;
-  &__container{
-  display: flex;
-  justify-content: space-around;
-}
-  &__title{
+  padding: 0 0 75px 0;
+  &__container {
+    display: flex;
+
+    justify-content: space-around;
+  }
+  &__title {
     @include checker-title (0 0 70px 0);
   }
-  &__title-bg{
+  &__title-bg {
     @include checker-title-bg;
   }
-  &__title-text{
-position: relative;
-      z-index: 4;
+  &__title-text {
+    position: relative;
+    z-index: 4;
   }
-  &__item{
+  &__item {
     width: 33.3333%;
-
-    text-align: center;
     padding: 0 20px;
 
-    img{
-      max-width: 170px;
-      height: auto;
-      max-height: 100%;
+    text-align: center;
+
+    img {
       display: block;
-      margin: 0 auto;
       width: 100%;
+      height: auto;
+      max-width: 170px;
+      max-height: 100%;
+      margin: 0 auto;
     }
   }
-  &__img{
+  &__img {
     display: inline-block;
     margin: 0 0 50px 0;
   }
-  &__descr{
-     @include checker-text(0, $col-text--dark-gray);
+  &__descr {
     font-weight: 700;
-  }
 
+    @include checker-text(0, $col-text--dark-gray);
+  }
 }
 @media #{$smart} {
   .typography-checker {
     padding: 0 0 55px 0;
-    &__img{
+    &__img {
       margin: 0 0 17% 0;
     }
   }

@@ -1,38 +1,34 @@
 .results-checker {
-
   margin: -17% 0 0 0;
-  &__title{
+  &__title {
     @include checker-title(0 0 30px 0);
-
   }
-  &__title-bg{
+  &__title-bg {
     @include checker-title-bg;
   }
-  &__title-text{
-position: relative;
-      z-index: 4;
+  &__title-text {
+    position: relative;
+    z-index: 4;
   }
 
-  &__text{
-    @include checker-text (0 auto 20px auto);
-
+  &__text {
     max-width: 650px;
 
-
-}
-&__img{
-  img{
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
+    @include checker-text (0 auto 20px auto);
   }
-}
+  &__img {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 }
 @media #{$smart} {
   .results-checker {
-    &__text{
+    &__text {
       padding: 0 20px;
     }
   }
