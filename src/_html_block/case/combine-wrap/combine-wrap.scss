@@ -1,6 +1,8 @@
 .combine-wrap {
   display: flex;
-  flex-wrap: wrap;
   padding-top: 65px;
+
   background: url(../img/case/sahola/combine-wrap/bg.jpg) no-repeat 50% 0;
+
+  flex-wrap: wrap;
 }

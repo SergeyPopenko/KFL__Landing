@@ -1,12 +1,13 @@
 .typography-sahola {
   width: 50%;
-  padding-left: 5%;
   padding-bottom: 6%;
+  padding-left: 5%;
   &__title {
     @include sahola-title(0 0 50px, $align: left);
   }
   &__list {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
   }
@@ -14,9 +15,10 @@
     margin: 0;
     img {
       display: inline-block;
-      vertical-align: middle;
-      max-width: 100%;
       height: auto;
+      max-width: 100%;
+
+      vertical-align: middle;
     }
   }
 }

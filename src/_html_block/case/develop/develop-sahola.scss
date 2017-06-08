@@ -3,21 +3,24 @@
     @include sahola-title(0 0 31px);
   }
   &__descr {
-    @include sahola-text(0 auto 45px);
     max-width: 810px;
     padding: 0 20px;
+
+    @include sahola-text(0 auto 45px);
     p {
       margin: 0;
     }
   }
   &__img {
-    text-align: center;
-    margin: 0 auto;
     max-width: 1055px;
+    margin: 0 auto;
+
+    text-align: center;
     img {
-      max-width: 100%;
-      height: auto;
       display: inline-block;
+      height: auto;
+      max-width: 100%;
+
       vertical-align: middle;
     }
   }
