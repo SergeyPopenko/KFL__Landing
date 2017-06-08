@@ -1,0 +1,89 @@
+.promo-sahola {
+  &__header {
+    padding: 51px 10.26% 58px 0;
+    text-align: right;
+    background: url(../img/case/sahola/promo/bg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+  }
+  &__logo {
+    margin: 0;
+    width: 256px;
+    height: 151px;
+    display: inline-block;
+    vertical-align: middle;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__about {
+    padding: 58px 40px 86px 57.68%;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: -111px;
+    width: 61.54%;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__descr {
+    position: relative;
+    z-index: 10;
+    @include sahola-text;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .promo-sahola {
+    &__header {
+      padding: 35px 5% 40px 0;
+      background-image: url(../img/case/sahola/promo/bg768.jpg);
+    }
+    &__logo {
+      margin: 0;
+      width: 256px;
+      height: 151px;
+      display: inline-block;
+      vertical-align: middle;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    &__about {
+      padding: 58px 40px 86px 57.68%;
+      position: relative;
+    }
+    &__img {
+      position: absolute;
+      margin: 0;
+      left: 0;
+      top: -111px;
+      width: 61.54%;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+    &__descr {
+      position: relative;
+      z-index: 10;
+      @include sahola-text;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

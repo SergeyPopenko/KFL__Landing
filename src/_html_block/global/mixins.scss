@@ -14,6 +14,7 @@
     font-size: 30px;
   }
 }
+
 @mixin checker-title($margin: 0, $color: $col-red) {
   position: relative;
 
@@ -37,13 +38,17 @@
   @media (max-width: 480px) {
     font-size: 16px;
   }
+  position: relative;
 }
+
 @mixin checker-title-bg($color: $col-title-bg) {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   z-index: 2;
-
+  font-weight: 700;
+  font-size: 122px;
   margin: 0;
   padding: 0;
 
@@ -64,6 +69,7 @@
     font-size: 45px;
   }
 }
+
 @mixin checker-text($margin: 0, $color: $col-333) {
   margin: $margin;
 
@@ -106,6 +112,7 @@
 
   border: 0;
 }
+
 @mixin phone($color: $col-333) {
   display: inline-block;
 
@@ -157,3 +164,22 @@
   }
 }
 
+// Sahola
+@mixin sahola-title($margin: 0, $color: $col-sahola, $align: center) {
+  font-weight: 400;
+  margin: $margin;
+  letter-spacing: $letter-spacing-25;
+  font-size: 40px;
+  line-height: 1;
+  color: $color;
+  text-align: $align;
+}
+
+@mixin sahola-text($margin: 0, $color: $col-sahola-text, $align: left) {
+  margin: $margin;
+  letter-spacing: $letter-spacing-25;
+  font-size: 22px;
+  line-height: 1.64;
+  color: $color;
+  text-align: $align;
+}

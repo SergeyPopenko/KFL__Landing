@@ -1,0 +1,24 @@
+.develop-sahola {
+  &__title {
+    @include sahola-title(0 0 31px);
+  }
+  &__descr {
+    @include sahola-text(0 auto 45px);
+    max-width: 810px;
+    padding: 0 20px;
+    p {
+      margin: 0;
+    }
+  }
+  &__img {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1055px;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
