@@ -131,4 +131,7 @@
   line-height: 1.64;
   color: $color;
   text-align: $align;
+  @media #{$tablet} {
+    font-size: 18px;
+  }
 }
