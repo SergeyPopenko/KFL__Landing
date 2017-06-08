@@ -185,4 +185,7 @@
   color: $color;
   text-align: $align;
   letter-spacing: $letter-spacing-25;
+  @media #{$tablet} {
+    font-size: 18px;
+  }
 }

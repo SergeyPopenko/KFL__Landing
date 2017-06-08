@@ -57,44 +57,14 @@
       background-image: url(../img/case/sahola/promo/bg768.jpg);
     }
     &__logo {
-      display: inline-block;
-      width: 256px;
-      height: 151px;
-      margin: 0;
-
-      vertical-align: middle;
-      img {
-        display: block;
-        height: auto;
-        max-width: 100%;
-      }
+      width: 186px;
+      height: 110px;
     }
     &__about {
-      position: relative;
-
-      padding: 58px 40px 86px 57.68%;
+      padding: 40px 20px 13% 57.68%;
     }
     &__img {
-      position: absolute;
-      top: -111px;
-      left: 0;
-
-      width: 61.54%;
-      margin: 0;
-      img {
-        display: block;
-        height: auto;
-        max-width: 100%;
-      }
-    }
-    &__descr {
-      position: relative;
-      z-index: 10;
-
-      @include sahola-text;
-      p {
-        margin: 0;
-      }
+      top: -25%;
     }
   }
 }
