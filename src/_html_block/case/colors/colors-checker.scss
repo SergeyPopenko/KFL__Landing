@@ -3,9 +3,13 @@
   background-size: cover;
   padding: 0 0 60px 0;
   &__container{
-  display: flex;
-  justify-content: space-around;
-}
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    width: 20%;
+    padding: 0 10px;
+  }
   &__title{
     @include checker-title (0 0 70px 0);
   }
@@ -13,13 +17,13 @@
     @include checker-title-bg;
   }
   &__title-text{
-position: relative;
-      z-index: 4;
+    position: relative;
+    z-index: 4;
   }
     &__col{
-
+margin: 0 auto;
     width: 130px;
-    height: 130px;
+    height:130px;
 
     border-radius: 50%;
 
@@ -61,3 +65,43 @@ position: relative;
 
 }
 
+@media #{$smart} {
+  .colors-checker {
+    padding: 0 0 30px 0;
+      &__col{
+
+   width: 90px;
+    height:90px;
+
+
+
+  }
+  }
+}
+@media (max-width: 550px) {
+  .colors-checker {
+
+    &__col{
+      width: 60px;
+      height:60px;
+    }
+    &__descr{
+      font-size: 14px;
+      margin: 20px 0 0 0;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .colors-checker {
+    padding: 0 0 15px 0;
+    &__col{
+      width: 37px;
+      height:37px;
+    }
+    &__descr{
+      margin: 10px 0 0 0;
+      font-size: 10px;
+
+    }
+  }
+}

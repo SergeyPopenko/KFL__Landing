@@ -20,4 +20,20 @@ position: relative;
 
 
 }
+&__img{
+  img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+}
+@media #{$smart} {
+  .results-checker {
+    &__text{
+      padding: 0 20px;
+    }
+  }
 }
