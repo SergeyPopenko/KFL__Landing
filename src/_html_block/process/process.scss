@@ -1,35 +1,44 @@
 .process {
+  padding: 38px 32px 90px;
+
   background: $bg-gray url(#{$img-path}/process/bg.jpg) no-repeat 50% 50%;
   background-size: cover;
-  padding: 38px 32px 90px;
   &__title {
     @include main-title(0 0 60px 30px);
   }
   &__list {
+    display: flex;
     margin: 0;
     padding: 0;
+
     list-style: none;
-    display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
   }
   &__item {
+    position: relative;
+
     width: 15.4%;
-    background: #b6b9c2;
     min-height: 240px;
     padding: 74px 0 5px;
     overflow: hidden;
-    position: relative;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.35);
+
+    background: #b6b9c2;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.35);
+
     transition: .3s;
     &::after {
-      content: "";
       position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
       top: 0;
       left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+
+      content: "";
       transition: .3s;
     }
     .process--active & {
@@ -45,33 +54,38 @@
     }
   }
   &__item-title {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.64;
-    letter-spacing: $letter-spacing-25;
-    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+
     margin: 0 0 16px;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.64;
     text-align: center;
     white-space: nowrap;
+    letter-spacing: $letter-spacing-25;
+    text-transform: uppercase;
     text-overflow: ellipsis;
-    position: relative;
-    z-index: 10;
   }
   &__descr {
-    font-size: 14px;
-    line-height: 1.29;
-    padding: 0 10px;
     position: relative;
     z-index: 10;
+
+    padding: 0 10px;
+
+    font-size: 14px;
+    line-height: 1.29;
     p {
       margin: 0;
     }
   }
   &__order {
-    font: 250px/200px Impact, Arial, sans-serif;
-    color: rgba(255,255,255,.5);
     position: absolute;
     z-index: 5;
+
+    font: 250px/200px Impact, Arial, sans-serif;
+    color: rgba(255,255,255,.5);
   }
   &__item--1 {
     .process__order {
@@ -90,6 +104,7 @@
     }
     &::after {
       background: linear-gradient(25deg, #fddada 10%, #cb1516 90%);
+
       transition-delay: .3s;
     }
   }
@@ -101,6 +116,7 @@
     }
     &::after {
       background: linear-gradient(27deg, #aff8fb 10%, #25e8ef 60%);
+
       transition-delay: .6s;
     }
   }
@@ -112,6 +128,7 @@
     }
     &::after {
       background: linear-gradient(14deg, #ebe7e8 10%, #908083 80%);
+
       transition-delay: .9s;
     }
   }
@@ -123,6 +140,7 @@
     }
     &::after {
       background: linear-gradient(11deg, #feebd4 10%, #fbc685 60%);
+
       transition-delay: 1.2s;
     }
   }
@@ -134,14 +152,16 @@
     }
     &::after {
       background: linear-gradient(37deg, #b0e2fb 10%, #3bbcfc 60%);
+
       transition-delay: 1.5s;
     }
   }
 }
 @media #{$tablet} {
   .process {
-    background-image: url(#{$img-path}/process/bg768.jpg);
     padding: 20px 26px 50px;
+
+    background-image: url(#{$img-path}/process/bg768.jpg);
     &__title {
       margin: 0 0 30px 45px;
     }
@@ -156,13 +176,15 @@
       }
     }
     &__item-title {
-      font-size: 14px;
       margin: 0 0 10px;
+
+      font-size: 14px;
     }
     &__descr {
+      padding: 0 6px;
+
       font-size: 10px;
       line-height: 1.2;
-      padding: 0 6px;
     }
     &__order {
       font-size: 200px;
@@ -173,33 +195,38 @@
 @media #{$smart} {
   .process {
     padding: 37px $smart-padding 30px;
+
     background-image: url(#{$img-path}/process/bg480.jpg);
     &__title {
       margin: 0 0 26px;
     }
     &__list {
       max-width: 100%;
+
       flex-wrap: wrap;
     }
     &__item {
       width: 48.5%;
       min-height: 190px;
-      padding: 30px 0 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.35);
       margin-bottom: 20px;
+      padding: 30px 0 5px;
+
+      box-shadow: 0 2px 5px rgba(0,0,0,.35);
       &::after {
         opacity: 1;
       }
     }
     &__item-title {
+      margin: 0 0 6px;
+
       font-size: 16px;
       line-height: 1.88;
-      margin: 0 0 6px;
     }
     &__descr {
+      padding: 0 7px;
+
       font-size: 11px;
       line-height: 1.36;
-      padding: 0 7px;
     }
     &__item--2 {
       margin-top: 40px;

@@ -1,37 +1,37 @@
 .works-checker {
-
-  &__container{
+  &__container {
     display: flex;
-    justify-content: space-between;
     padding: 10px 0 0 0;
 
+    justify-content: space-between;
   }
-  &__item{
-    width: 49.4%;
+  &__item {
     position: relative;
+
+    width: 49.4%;
     overflow: hidden;
+
     transition: .5s;
-    img{
+    img {
       display: block;
+      width: 100%;
+      height: auto;
       max-width: 100%;
       max-height: 100%;
-      height: auto;
-      width: 100%;
-
     }
     &:hover {
-      box-shadow: 0 0 30px rgba(0,0,0,0.8);
+      box-shadow: 0 0 30px rgba(0,0,0,.8);
+
       transform: scale(1.05);
     }
-
   }
-  &__link{
-    font-size: 0;
+  &__link {
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
 
+    font-size: 0;
   }
 }

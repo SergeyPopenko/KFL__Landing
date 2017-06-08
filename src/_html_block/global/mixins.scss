@@ -1,10 +1,11 @@
 @mixin main-title($margin: 0) {
-  font-weight: 700;
   margin: $margin;
-  letter-spacing: $letter-spacing-50;
+
   font-size: 100px;
+  font-weight: 700;
   line-height: 1;
   color: $col-main-title;
+  letter-spacing: $letter-spacing-50;
   text-transform: uppercase;
   @media #{$tablet} {
     font-size: 60px;
@@ -15,40 +16,87 @@
 }
 
 @mixin checker-title($margin: 0, $color: $col-red) {
-  font-weight: 500;
+  position: relative;
+  position: relative;
+
   margin: $margin;
-  letter-spacing: $letter-spacing--10;
+
   font-size: 44px;
+  font-weight: 500;
   line-height: 1;
   color: $color;
-  text-transform: uppercase;
   text-align: center;
-  position: relative;
+  letter-spacing: $letter-spacing--10;
+  text-transform: uppercase;
+  @media #{$tablet} {
+    margin: 0 0 30px 0;
+
+    font-size: 26px;
+  }
+  @media #{$smart} {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 }
 
 @mixin checker-title-bg($color: $col-title-bg) {
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
   z-index: 2;
-  font-weight: 700;
-  font-size: 122px;
+
   margin: 0;
   padding: 0;
+
+  font-size: 122px;
+  font-size: 122px;
+  font-weight: 700;
+  font-weight: 700;
   line-height: 1;
   color: $color;
   text-align: center;
+
+  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  @media #{$tablet} {
+    font-size: 72px;
+  }
+  @media #{$smart} {
+    font-size: 58px;
+  }
+  @media (max-width: 480px) {
+    font-size: 45px;
+  }
 }
 
 @mixin checker-text($margin: 0, $color: $col-333) {
-  font-weight: 500;
   margin: $margin;
-  letter-spacing: $letter-spacing-50;
+
   font-size: 22px;
+  font-weight: 500;
   line-height: 1.68;
   color: $color;
   text-align: center;
+  letter-spacing: $letter-spacing-50;
+  @media #{$tablet} {
+    font-size: 20px;
+  }
+  @media #{$smart} {
+    font-size: 16px;
+  }
+  @media (max-width: 480px) {
+    // font-size: 14px;
+    letter-spacing: $letter-spacing-25;
+  }
+  @media (max-width: 420px) {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  @media (max-width: 360px) {
+    font-size: 12px;
+  }
 }
 
 @mixin wrapper {
@@ -62,17 +110,19 @@
 @mixin fieldset($margin: 0, $padding: 0) {
   margin: $margin;
   padding: $padding;
+
   border: 0;
 }
 
 @mixin phone($color: $col-333) {
-  text-decoration: none;
-  color: $color;
-  font-size: 20px;
-  line-height: 1;
   display: inline-block;
-  vertical-align: middle;
+
+  font-size: 20px;
   font-weight: 700;
+  line-height: 1;
+  color: $color;
+  vertical-align: middle;
+  text-decoration: none;
   letter-spacing: $letter-spacing-200;
   @media #{$tablet} {
     font-size: 18px;
@@ -84,8 +134,8 @@
 }
 
 @mixin logo($width: 200px) {
-  margin: 0;
   width: $width;
+  margin: 0;
   img {
     display: block;
     height: auto;
@@ -101,36 +151,40 @@
 
 @mixin promo-img($zindex: 1, $opacity: 0) {
   position: absolute;
-  width: 100%;
   top: 0;
   left: 0;
   z-index: $zindex;
+
+  width: 100%;
+
   opacity: $opacity;
   img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
   }
 }
 
 // Sahola
 @mixin sahola-title($margin: 0, $color: $col-sahola, $align: center) {
-  font-weight: 400;
   margin: $margin;
-  letter-spacing: $letter-spacing-25;
+
   font-size: 40px;
+  font-weight: 400;
   line-height: 1;
   color: $color;
   text-align: $align;
+  letter-spacing: $letter-spacing-25;
 }
 
 @mixin sahola-text($margin: 0, $color: $col-sahola-text, $align: left) {
   margin: $margin;
-  letter-spacing: $letter-spacing-25;
+
   font-size: 22px;
   line-height: 1.64;
   color: $color;
   text-align: $align;
+  letter-spacing: $letter-spacing-25;
   @media #{$tablet} {
     font-size: 18px;
   }

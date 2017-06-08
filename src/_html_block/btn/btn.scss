@@ -1,20 +1,24 @@
 .btn {
   display: inline-block;
-  vertical-align: middle;
+
   border: 0;
+  border-radius: 0;
+  outline: none;
+
   font-size: 24px;
   line-height: 1;
-  border-radius: 0;
-  letter-spacing: $letter-spacing-25;
   color: #fff;
-  text-decoration: none;
   text-align: center;
-  outline: none;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: $letter-spacing-25;
+
   transition: .3s;
   &--red {
     min-width: 220px;
-    background: #c90202;
     padding: 18px 15px;
+
+    background: #c90202;
     &:hover,
     &:active {
       background: #830202;
@@ -23,20 +27,20 @@
   &--orange {
     min-width: 200px;
     padding: 13px 15px;
+
     background: #ff9302;
     &:hover,
     &:active {
-      background: #cc6600;
+      background: #c60;
     }
   }
 }
-.btn-close {
 
-}
 @media #{$smart} {
   .btn {
-    font-size: 16px;
     padding: 12px 15px;
+
+    font-size: 16px;
     &--red {
       min-width: 160px;
     }

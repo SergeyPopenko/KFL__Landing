@@ -1,9 +1,10 @@
 .header {
-  padding: 0 5%;
   display: flex;
+  min-height: 60px;
+  padding: 0 5%;
+
   align-items: center;
   justify-content: space-between;
-  min-height: 60px;
   &__logo {
     @include logo;
   }
@@ -13,9 +14,11 @@
 }
 @media #{$smart} {
   .header {
-    padding: 0 $smart-padding;
     min-height: 44px;
+    padding: 0 $smart-padding;
+
     background: #e1e2e6;
+
     color: $col-fff;
   }
 }
