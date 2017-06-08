@@ -2,13 +2,14 @@ html {
   font-size: $htmlSize;
   box-sizing: border-box;
 }
-body { 
+body {
   font: 1rem/1 "Evolventa", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
   color: $col-333;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $bg;
+  overflow-x: hidden;
 }
 
 *,

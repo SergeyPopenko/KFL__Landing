@@ -64,8 +64,10 @@
   }
 }
 @media #{$tablet} {
-  &__title {
-    margin-bottom: -20px;
+  .works {
+    &__title {
+      margin-bottom: -20px;
+    }
   }
 }
 @media #{$smart} {

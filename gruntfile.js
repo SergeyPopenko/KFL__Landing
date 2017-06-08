@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function(grunt) {
 
   require("load-grunt-tasks")(grunt);
@@ -7,6 +9,7 @@ module.exports = function(grunt) {
     clean: {
       build: ["build"]
     },
+
     includereplace: {
       html: {
         src: "*.html",
@@ -15,6 +18,7 @@ module.exports = function(grunt) {
         cwd: "src/"
       }
     },
+
     // Копируем файлы из папки source в папку build
     copy: {
       js: {
@@ -36,6 +40,7 @@ module.exports = function(grunt) {
         dest: "build/font/"
       }
     },
+
     // Улучшаем SCSS файл (отступы, порядок свойств и прочее)
     csscomb: {
       style: {
@@ -43,6 +48,7 @@ module.exports = function(grunt) {
         src: ["src/_html_block/**/*.scss"]
       }
     },
+
     // Конвертируем SCSS файлы в CSS
     sass: {
       style: {
@@ -51,6 +57,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     // Добавляем префиксы
     autoprefixer: {
       options: {
@@ -60,6 +67,7 @@ module.exports = function(grunt) {
         src: "build/css/main.css"
       }
     },
+
     // Объединяем медиа-выражения
     cmq: {
       style: {
@@ -68,6 +76,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     // Минимизиурем CSS
     cssmin: {
       style: {
@@ -80,6 +89,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     // Объединяем несколько JS файлов
     concat: {
       start: {
@@ -89,6 +99,7 @@ module.exports = function(grunt) {
         dest: "build/js/script.js"
       }
     },
+
     // Минимизируем js файлы
     uglify: {
       start: {
@@ -97,6 +108,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     // Минимизируем html
     htmlmin: {
       options: {
@@ -112,6 +124,21 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    browserSync: {
+      server: {
+        bsFiles: {
+          src: [
+            "build/"
+          ]
+        },
+        options: {
+          server: "build/",
+          watchTask: true
+        }
+      }
+    },
+
     // Отслеживаем изенения в указанных файлах и выполняем описанные действия
     watch: {
       style: {
@@ -183,7 +210,7 @@ module.exports = function(grunt) {
     "uglify",
     "copy",
     "includereplace",
-    "htmlmin",
+    "browserSync",
     "watch"
   ]);
   grunt.registerTask("js",[
