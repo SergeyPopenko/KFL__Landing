@@ -25,3 +25,28 @@
     }
   }
 }
+
+@media #{$tablet} {
+  .develop-sahola {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__descr {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media #{$smart} {
+  .develop-sahola {
+    &__title {
+      margin-bottom: 13px;
+    }
+    &__descr {
+      margin-bottom: 27px;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

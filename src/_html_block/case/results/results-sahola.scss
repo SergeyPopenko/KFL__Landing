@@ -23,3 +23,58 @@
     }
   }
 }
+
+@media #{$tablet} {
+  .results-sahola {
+    min-height: 450px;
+
+    background-image: url(../img/case/sahola/results/bg768.jpg);
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media #{$smart} {
+  .results-sahola {
+    min-height: 0;
+    text-align: center;
+    display: block;
+    padding: 0;
+    background-image: none;
+    margin: -13px 0 0;
+    &::after {
+      content: "";
+      display: block;
+      height: 0;
+      padding-bottom: 68.125%;
+      background: url(../img/case/sahola/results/bg320.jpg) no-repeat 50% 50%;
+      background-size: cover;
+    }
+    &__wrap {
+      width: auto;
+      max-width: 100%;
+      padding: 0 20px;
+      margin: 0 0 30px;
+    }
+    &__descr {
+      color: $col-sahola-text;
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 13px;
+      color: $col-sahola;
+      text-align: center;
+    }
+  }
+}
+
+@media #{$smart-landscape} {
+  .results-sahola {
+    &::after {
+      background-image: url(../img/case/sahola/results/bg480.jpg);
+    }
+  }
+}
+
+
