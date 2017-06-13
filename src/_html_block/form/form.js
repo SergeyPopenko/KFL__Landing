@@ -52,6 +52,8 @@
     }
   });
   $(".form").on("submit", function(e){
+    var form = $(this),
+        formFeedback = form.siblings(".form__feedback");
     e.preventDefault();
     if ($(this).find(".form__text-invalid").length == 0) {
       $.ajax({
@@ -59,7 +61,18 @@
         type: $(this).attr("method"),
         data: $(this).serialize(),
         success: function(data) {
-          console.log(data);
+          formFeedback.find("p").text("Thank you!");
+          formFeedback.addClass("form__feedback--active");
+          $(".btn-close").on("click", function(){
+            formFeedback.removeClass("form__feedback--active");
+          });
+        },
+        error: function(){
+          formFeedback.find("p").html("Something went wrong!<br> Try again, please");
+          formFeedback.addClass("form__feedback--active");
+          $(".btn-close").on("click", function(){
+            formFeedback.removeClass("form__feedback--active");
+          });
         }
       });
     }
