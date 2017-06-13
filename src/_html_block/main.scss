@@ -19,6 +19,7 @@
 @import "form/form.scss";
 @import "map/map.scss";
 @import "footer/footer.scss";
+@import "case/works/works-case.scss";
 
 
 @import "slick/slick.scss";
@@ -32,7 +33,6 @@
 @import "case/design/design-checker.scss";
 @import "case/develop/develop-checker.scss";
 @import "case/results/results-checker.scss";
-@import "case/works/works-checker.scss";
 
 //-------Sahola-------------
 @import "case/promo/promo-sahola.scss";
@@ -42,3 +42,10 @@
 @import "case/design/design-sahola.scss";
 @import "case/develop/develop-sahola.scss";
 @import "case/results/results-sahola.scss";
+
+//-------electrical-------------
+@import "case/promo/promo-electrical.scss";
+@import "case/typography/typography-electrical.scss";
+@import "case/design/design-electrical.scss";
+@import "case/develop/develop-electrical.scss";
+@import "case/results/results-electrical.scss";

@@ -1,0 +1,70 @@
+.design-electrical {
+  position: relative;
+
+  padding: 0 0 80px 0;
+
+  background: url(../img/case/electrical/design/design-bg.jpg) no-repeat 50% 50%;
+  background-size: contain;
+
+  text-align: center;
+  p {
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+
+    @include electrical-text;
+  }
+  &__title {
+    @include electrical-title (0 0 40px 0);
+  }
+  &__img {
+    display: inline-block;
+    width: 61%;
+    max-width: 570px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+
+      box-shadow: 0 5px 30px rgba(129,129,129,.5);
+    }
+  }
+}
+
+@media #{$tablet} {
+  .design-electrical {
+    padding: 0 0 30px 0;
+
+    background: url(../img/case/electrical/design/design-bg768.jpg) no-repeat 50% 50%;
+    background-size: contain;
+    p {
+      margin: 0 auto 30px auto;
+    }
+    &__title {
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+@media #{$smart} {
+  .design-electrical {
+    padding: 0 20px 20px 20px;
+
+    background: url(../img/case/electrical/design/design-bg481.jpg) no-repeat 50% 50%;
+    background-size: contain;
+    p {
+      margin: 0 auto 20px auto;
+    }
+    &__title {
+      margin: 0 0 15px 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .design-electrical {
+    background: url(../img/case/electrical/design/design-bg320.jpg) no-repeat 50% 50%;
+    background-size: contain;
+  }
+}
