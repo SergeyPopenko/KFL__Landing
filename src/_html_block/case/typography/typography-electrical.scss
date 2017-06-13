@@ -1,0 +1,180 @@
+.typography-electrical {
+  position: relative;
+
+  padding: 35px 60px 0 60px;
+
+  background: url(../img/case/electrical/typography/typography-bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+
+  text-align: center;
+
+  &__task {
+    width: 55%;
+    padding: 0 0 70px 0;
+
+    text-align: center;
+    p {
+      @include electrical-text;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__title {
+    @include electrical-title (0 0 40px 0);
+  }
+  &__title--center {
+    text-align: center;
+  }
+  &__container {
+    display: flex;
+    padding: 0 0 55px 0;
+
+    justify-content: space-around;
+  }
+  &__container--between {
+    justify-content: space-between;
+  }
+  &__font {
+    width: 28%;
+    max-width: 260px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &__col {
+    width: 140px;
+    height: 140px;
+
+    background: #fff;
+    box-shadow: 10px 10px 21px rgba(129,129,129,.5);
+
+    text-align: center;
+    vertical-align: middle;
+
+    @include electrical-text;
+    &::after {
+      display: inline-block;
+      width: 0;
+      height: 100%;
+
+      vertical-align: middle;
+
+      content: "";
+    }
+  }
+  &__col--yellow {
+    background: #fbf0e2;
+  }
+  &__col--grey {
+    background: #d9dcde;
+  }
+  &__col--black {
+    background: #13181e;
+
+    color: $col-fff;
+  }
+  &__col--orange {
+    background: #fea933;
+  }
+}
+
+@media #{$tablet} {
+  .typography-electrical {
+    &__title {
+      margin: 0 0 30px 0;
+    }
+    &__col {
+      width: 120px;
+      height: 120px;
+    }
+    &__img {
+      top: -15%;
+
+      width: 45%;
+    }
+    &__container {
+      padding: 0 0 35px 0;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .typography-electrical {
+    &__task {
+      width: 60%;
+      padding: 0 0 50px 0;
+    }
+    &__img {
+      top: -10%;
+
+      width: 40%;
+    }
+  }
+}
+@media #{$smart} {
+  .typography-electrical {
+    padding: 20px 20px 0 20px;
+    &__title {
+      margin: 0 0 15px 0;
+    }
+    &__col {
+      width: 80px;
+      height: 80px;
+
+      font-size: 10px;
+    }
+    &__task {
+      padding: 0 0 40px 0;
+    }
+    &__container {
+      padding: 0 0 30px 0;
+    }
+    &__img {
+      top: -115px;
+
+      width: auto;
+    }
+  }
+}
+@media (max-width: 540px) {
+  .typography-electrical {
+    &__task {
+      width: 100%;
+      padding: 0 0 30px 0;
+    }
+
+    &__img {
+      top: -90px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .typography-electrical {
+    &__task {
+      padding: 0 0 20px 0;
+    }
+    &__col {
+      width: 40px;
+      height: 40px;
+
+      font-size: 8px;
+    }
+    &__container {
+      padding: 0 0 20px 0;
+    }
+  }
+}
