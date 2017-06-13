@@ -174,6 +174,12 @@
   color: $color;
   text-align: $align;
   letter-spacing: $letter-spacing-25;
+  @media #{$tablet} {
+    font-size: 36px;
+  }
+  @media #{$smart} {
+    font-size: 16px;
+  }
 }
 
 @mixin sahola-text($margin: 0, $color: $col-sahola-text, $align: left) {
@@ -186,6 +192,14 @@
   letter-spacing: $letter-spacing-25;
   @media #{$tablet} {
     font-size: 18px;
+  }
+  @media #{$smart} {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: $letter-spacing-50;
+  }
+  @media #{$smart-landscape} {
+    font-size: 14px;
   }
 }
 

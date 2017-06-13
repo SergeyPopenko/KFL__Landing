@@ -9,8 +9,6 @@
   }
   &__logo {
     display: inline-block;
-    width: 256px;
-    height: 151px;
     margin: 0;
 
     vertical-align: middle;
@@ -56,15 +54,62 @@
 
       background-image: url(../img/case/sahola/promo/bg768.jpg);
     }
-    &__logo {
-      width: 186px;
-      height: 110px;
-    }
     &__about {
       padding: 40px 20px 13% 57.68%;
     }
     &__img {
       top: -25%;
+    }
+  }
+}
+
+@media #{$smart} {
+  .promo-sahola {
+    &__header {
+      padding: 30px 20px 28px 0;
+
+      background-image: url(../img/case/sahola/promo/bg320.jpg);
+    }
+    &__about {
+      padding: 45px 35px 0 20px;
+    }
+    &__img {
+      width: 195px;
+      top: -87px;
+    }
+    // &__descr {
+    //   max-width: 270px;
+    // }
+  }
+}
+
+@media (min-width: 480px) and (max-width: 550px) {
+  .promo-sahola {
+    &__header {
+      background-image: url(../img/case/sahola/promo/bg480.jpg);
+    }
+    &__about {
+      padding-top: 120px;
+    }
+    &__img {
+      width: 295px;
+    }
+  }
+}
+
+@media (min-width: 551px) and (max-width: 767px) {
+  .promo-sahola {
+    &__header {
+      background-image: url(../img/case/sahola/promo/bg480.jpg);
+    }
+    &__about {
+      padding: 30px 20px 30px 50%;
+    }
+    &__img {
+      width: 50%;
+    }
+    &__descr {
+      max-width: 100%;
     }
   }
 }

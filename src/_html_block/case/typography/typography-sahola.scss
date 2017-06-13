@@ -22,3 +22,27 @@
     }
   }
 }
+
+@media #{$tablet} {
+  .typography-sahola {
+    &__title {
+      margin-bottom: 35px;
+    }
+    &__img {
+      text-align: center;
+      img {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media #{$smart} {
+  .typography-sahola {
+    margin-bottom: 22px;
+    padding: 0 5%;
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+}

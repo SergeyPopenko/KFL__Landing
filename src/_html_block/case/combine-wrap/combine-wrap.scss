@@ -6,3 +6,26 @@
 
   flex-wrap: wrap;
 }
+
+@media #{$tablet} {
+  .combine-wrap {
+    padding-top: 45px;
+
+    background-image: url(../img/case/sahola/combine-wrap/bg768.jpg);
+    background-size: contain;
+  }
+}
+
+@media #{$smart} {
+  .combine-wrap {
+    padding-top: 18px;
+
+    background-image: url(../img/case/sahola/combine-wrap/bg320.jpg);
+  }
+}
+
+@media #{$smart-landscape} {
+  .combine-wrap {
+    background-image: url(../img/case/sahola/combine-wrap/bg480.jpg);
+  }
+}

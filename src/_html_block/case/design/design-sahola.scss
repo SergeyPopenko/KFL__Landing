@@ -16,23 +16,73 @@
     }
   }
   &__img {
-    margin: 0;
-
     text-align: center;
-    img {
-      display: inline-block;
-      height: auto;
-      max-width: 100%;
-
-      vertical-align: middle;
-    }
     &--laptop {
-      margin-bottom: 35px;
-    }
-    &--long {
+      width: 73%;
+      margin: 0 auto 35px;
       img {
-        box-shadow: 0 0 24px 1px rgba(129, 129, 129, .56);
+        width: 100%;
+        height: auto;
+        display: block;
       }
     }
+    &--long {
+      margin: 0 auto;
+      width: 50%;
+      img {
+        box-shadow: 0 0 24px 1px rgba(129, 129, 129, 0.56);
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media #{$tablet} {
+  .design-sahola {
+    padding: 0 0 40px;
+
+    background-image: url(../img/case/sahola/design/bg768.jpg);
+    background-size: contain;
+    &__title {
+      margin-bottom: 25px;
+    }
+    &__descr {
+      margin-bottom: 35px;
+    }
+    &__img {
+      &--long {
+        img {
+          box-shadow: 0 0 15px 1px rgba(129, 129, 129, 0.56);
+        }
+      }
+    }
+  }
+}
+
+@media #{$smart} {
+  .design-sahola {
+    padding: 0 0 34px;
+
+    background-image: url(../img/case/sahola/design/bg320.jpg);
+    &__title {
+      margin-bottom: 17px;
+    }
+    &__descr {
+      margin-bottom: 13px;
+      padding: 0 20px;
+    }
+    &__img {
+      &--laptop {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media #{$smart-landscape} {
+  .design-sahola {
+    background-image: url(../img/case/sahola/design/bg480.jpg);
   }
 }
