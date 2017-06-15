@@ -27,7 +27,7 @@
     background: #b6b9c2;
     box-shadow: 2px 2px 5px rgba(0,0,0,.35);
 
-    transition: .3s;
+    transition: .3s all linear;
     &::after {
       position: absolute;
       top: 0;
@@ -39,7 +39,7 @@
       opacity: 0;
 
       content: "";
-      transition: .3s;
+      transition: .3s all linear;
     }
     .process--active & {
       &::after {

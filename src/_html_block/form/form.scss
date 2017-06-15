@@ -82,6 +82,12 @@
 
       font-size: .75em;
     }
+    &.form__input--valid {
+      border-bottom-color: $col-valid;
+    }
+    &.form__input--invalid {
+      border-bottom-color: $col-invalid;
+    }
   }
   &__input--present {
     height: 29px;
@@ -91,12 +97,6 @@
 
     color: $col-gold;
     text-align: left;
-  }
-  &__input--valid {
-    border-bottom-color: $col-valid;
-  }
-  &__input--invalid {
-    border-bottom-color: $col-invalid;
   }
   &__label {
     position: absolute;

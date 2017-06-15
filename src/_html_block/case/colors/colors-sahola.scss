@@ -1,7 +1,7 @@
 .colors-sahola {
   width: 50%;
   padding-right: 5%;
-  padding-bottom: 6%;
+  padding-bottom: 70px;
   padding-left: 7.35%;
   &__title {
     @include sahola-title(0 0 50px, $align: left);
@@ -28,6 +28,7 @@
 
 @media #{$tablet} {
   .colors-sahola {
+    padding-bottom: 50px;
     &__title {
       margin-bottom: 35px;
     }

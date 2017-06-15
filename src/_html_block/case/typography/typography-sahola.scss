@@ -1,6 +1,6 @@
 .typography-sahola {
   width: 50%;
-  padding-bottom: 6%;
+  padding-bottom: 70px;
   padding-left: 5%;
   &__title {
     @include sahola-title(0 0 50px, $align: left);
@@ -25,6 +25,7 @@
 
 @media #{$tablet} {
   .typography-sahola {
+    padding-bottom: 50px;
     &__title {
       margin-bottom: 35px;
     }
