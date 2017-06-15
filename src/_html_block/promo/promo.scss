@@ -58,8 +58,11 @@
   &__sect {
     position: absolute;
     top: 40%;
-    right: 12%;
+    right: 0;
     z-index: 100;
+
+    width: 64%;
+    min-width: 700px;
 
     text-align: center;
 
@@ -109,7 +112,8 @@
     font-weight: 700;
     line-height: 1;
     color: #5c616e;
-    letter-spacing: $letter-spacing-50;
+    white-space: nowrap;
+    letter-spacing: $letter-spacing-200;
     text-transform: uppercase;
   }
   &__info-text {
@@ -171,13 +175,16 @@
   .promo {
     &__sect {
       top: 30%;
-      right: 5%;
+      right: 0;
+
+      min-width: 540px;
     }
     &__slogan {
       font-size: 40px;
     }
     &__title {
       font-size: 50px;
+      letter-spacing: $letter-spacing-100;
     }
     &__info-text {
       margin: 0 0 40px;
