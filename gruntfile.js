@@ -38,6 +38,12 @@ module.exports = function(grunt) {
         cwd: "src/_html_block/font/",
         src: ["**"],
         dest: "build/font/"
+      },
+      php: {
+        expand: true,
+        cwd: "src/*.php",
+        src: ["**"],
+        dest: "build/"
       }
     },
 

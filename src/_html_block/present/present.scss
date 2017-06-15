@@ -22,24 +22,27 @@
 
     width: 50%;
     min-width: 400px;
-    padding: 15px 40px 20px;
+    padding: 30px 10px 31px;
 
     background: #1a1e27;
   }
   &__form-descr {
-    margin: 0 0 60px;
+    margin: 0 0 35px;
 
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
-    line-height: 1.6;
+    line-height: 1.07;
     color: $col-gold;
     text-align: center;
+    text-transform: uppercase;
     letter-spacing: $letter-spacing-25;
     span {
       display: block;
 
-      font-size: .8em;
+      font-size: 0.8em;
+      line-height: 1.25;
       font-weight: 400;
+      text-transform: none;
     }
   }
   &__animation {
@@ -85,50 +88,41 @@
   &__img-2 {
     z-index: 10;
     .present__img-animation & {
-      animation: presentImg1 8s linear both infinite;
+      animation: presentImg2 15s linear infinite;
     }
   }
   &__img-3 {
     z-index: 20;
     .present__img-animation & {
-      animation: presentImg2 8s linear both infinite;
+      animation: presentImg3 15s linear infinite;
     }
   }
 }
-@keyframes presentImg1 {
-  0 {
-    opacity: 0;
-  }
-  10% {
+@keyframes presentImg2 {
+  15% {
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
-  90% {
+  80% {
     opacity: 1;
   }
-  100% {
+  85% {
     opacity: 0;
   }
 }
-@keyframes presentImg2 {
-  0 {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
+@keyframes presentImg3 {
   40% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  80% {
     opacity: 0;
   }
-  100% {
+  45% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  70%{
     opacity: 0;
   }
 }
@@ -136,7 +130,7 @@
   .present {
     &__form {
       min-width: 0;
-      padding: 15px 20px 20px;
+      padding: 20px 10px 20px;
     }
   }
 }

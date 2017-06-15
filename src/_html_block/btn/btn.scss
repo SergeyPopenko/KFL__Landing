@@ -34,6 +34,10 @@
       background: #c60;
     }
   }
+  &--present {
+    min-width: 160px;
+    padding: 8px 15px;
+  }
 }
 
 .btn-close {
@@ -69,6 +73,9 @@
     }
     &--orange {
       min-width: 140px;
+    }
+    &--present {
+      padding: 8px 15px;
     }
   }
 }

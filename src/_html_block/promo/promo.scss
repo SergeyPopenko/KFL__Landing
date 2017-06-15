@@ -195,6 +195,9 @@
 }
 @media #{$smart} {
   .promo {
+    &__sect {
+      min-width: 0;
+    }
     &__animation {
       .promo__img-2 {
         animation: promoStairsOn .6s linear forwards;
