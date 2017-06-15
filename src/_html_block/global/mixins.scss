@@ -247,14 +247,14 @@
   }
 }
 
-@mixin electrical-text($margin: 0, $color: $col-electrical-text) {
+@mixin electrical-text($text-align: left, $margin: 0 auto, $color: $col-electrical-text) {
   margin: $margin;
 
   font-size: 22px;
   font-weight: 500;
   line-height: 1.68;
   color: $color;
-  text-align: left;
+  text-align: $text-align;
   letter-spacing: $letter-spacing-25;
   @media #{$tablet} {
     font-size: 20px;
