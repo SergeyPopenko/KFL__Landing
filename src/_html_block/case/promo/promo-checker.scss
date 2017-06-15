@@ -1,7 +1,7 @@
 .promo-checker {
   padding: 225px 65px 0;
 
-  background: $bg-gray url(#{$img-path}/case/checker/promo/promo-checker__bg.jpg) no-repeat 50% 0;
+  background: url(#{$img-path}/case/checker/promo/promo-checker__bg.jpg) no-repeat 50% 0;
   &__title {
     @include checker-title (0 0 60px 0);
   }
