@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       php: {
         expand: true,
         cwd: "src/*.php",
-        src: ["**"],
+        src: [],
         dest: "build/"
       }
     },
