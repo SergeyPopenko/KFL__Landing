@@ -41,8 +41,8 @@ module.exports = function(grunt) {
       },
       php: {
         expand: true,
-        cwd: "src/*.php",
-        src: [],
+        cwd: "src/",
+        src: ["*.php"],
         dest: "build/"
       }
     },
