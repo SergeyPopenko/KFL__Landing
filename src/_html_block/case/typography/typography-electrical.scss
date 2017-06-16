@@ -59,14 +59,18 @@
   &__col {
     width: 140px;
     height: 140px;
+    margin: 0;
 
     background: #fff;
     box-shadow: 10px 10px 21px rgba(129,129,129,.5);
 
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.68;
+    color: $col-electrical-text;
     text-align: center;
     vertical-align: middle;
-
-    @include electrical-text(center);
+    letter-spacing: $letter-spacing-25;
     &::after {
       display: inline-block;
       width: 0;
@@ -101,6 +105,8 @@
     &__col {
       width: 120px;
       height: 120px;
+
+      font-size: 20px;
     }
     &__img {
       top: -15%;

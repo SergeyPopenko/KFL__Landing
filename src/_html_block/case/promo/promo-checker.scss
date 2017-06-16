@@ -51,7 +51,7 @@
   .promo-checker {
     padding: 18% 30px 0 30px;
 
-    background: $bg-gray url(#{$img-path}/case/checker/promo/promo-checker__bg--smart1.jpg) no-repeat 50% 0;
+    background-image: url(#{$img-path}/case/checker/promo/promo-checker__bg--smart1.jpg);
     background-size: 100% auto;
     &__hidden {
       display: none;

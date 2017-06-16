@@ -1,8 +1,9 @@
 // Map
+var coordinate = {lat: 39.966934, lng: -75.173963};
 if (window.innerWidth > 767) {
   var scale = 15,
-      drag = true,
-      scroll = true,
+      drag = false,
+      scroll = false,
       markerUrl = "img/map/marker.svg",
       markerSize = 80,
       markerAnchorPoint = 40;
@@ -178,7 +179,7 @@ var style1 = [{"featureType":"administrative","elementType":"labels.text.fill","
       ];
 var map = new google.maps.Map(document.getElementById("map"), {
   zoom: scale,
-  center: new google.maps.LatLng(39.966934, -75.173963),
+  center: coordinate,
   panControl: false,
   zoomControl: false,
   mapTypeControl: false,
@@ -188,7 +189,7 @@ var map = new google.maps.Map(document.getElementById("map"), {
   styles: style1
 });
 var marker = new google.maps.Marker({
-  position: {lat: 39.966934, lng: -75.173963},
+  position: coordinate,
   map: map,
   icon: {
     url: markerUrl,
@@ -200,4 +201,8 @@ var marker = new google.maps.Marker({
   zIndex: 1000
 });
 marker.setMap(map);
+
+map.addListener("center_changed", function(){
+  map.panTo(coordinate);
+});
 // --------------------------------------------
