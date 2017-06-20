@@ -3,7 +3,7 @@
 
   background: $bg-gray;
   &__title {
-    text-align: right;
+    text-align: center;
 
     @include main-title(0 0 17px);
   }
@@ -14,7 +14,7 @@
     font-weight: 700;
     line-height: 1.36;
     color: $bg-blue;
-    text-align: right;
+    text-align: center;
     letter-spacing: $letter-spacing-25;
 
     quotes: "\0022" "\0022";

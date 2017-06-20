@@ -1,7 +1,5 @@
 .who {
   position: relative;
-
-  max-width: 1130px;
   padding: 35px 0 50px;
   &--active {
     &::after {
@@ -29,7 +27,8 @@
 
     text-align: right;
 
-    @include main-title(0 7px 0 0);
+    @include main-title(0 15px);
+    padding: 0 40px 0 0;
   }
   &__info {
     position: relative;
@@ -98,6 +97,7 @@
     padding: 20px 0 0;
     &__title {
       margin: 0 58px 10px;
+      padding: 0;
     }
     &::after {
       width: 31%;

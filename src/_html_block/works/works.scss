@@ -6,7 +6,8 @@
     position: relative;
     z-index: 200;
 
-    @include main-title(0 0 -32px 60px);
+    @include main-title(0 0 10px);
+    text-align: center;
   }
   &__list {
     position: relative;
@@ -74,7 +75,7 @@
 @media #{$tablet} {
   .works {
     &__title {
-      margin-bottom: -20px;
+      margin-bottom: 10px;
     }
   }
 }
