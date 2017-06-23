@@ -177,7 +177,7 @@
       &::after {
         height: 72%;
         .slick-active & {
-          transform: perspective(1000px) rotateY(32deg);
+          transform: perspective(1000px) rotateY(20deg);
         }
       }
     }
@@ -230,6 +230,27 @@
     }
     &__button {
       display: none;
+    }
+  }
+}
+
+@media #{$smart} and (orientation: portrait) {
+  .reviews {
+    &__info {
+      display: block;
+    }
+    &__img {
+      max-width: 200px;
+      min-height: 200px;
+      margin: 0 0 20px 20px;
+    }
+    &__link--info {
+      text-align: left;
+    }
+    &__slide {
+      &::after {
+        height: 62%;
+      }
     }
   }
 }

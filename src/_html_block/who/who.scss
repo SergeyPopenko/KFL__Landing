@@ -1,5 +1,6 @@
 .who {
   position: relative;
+
   padding: 35px 0 50px;
   &--active {
     &::after {
@@ -25,10 +26,11 @@
     position: relative;
     z-index: 10;
 
+    padding: 0 40px 0 0;
+
     text-align: right;
 
     @include main-title(0 15px);
-    padding: 0 40px 0 0;
   }
   &__info {
     position: relative;

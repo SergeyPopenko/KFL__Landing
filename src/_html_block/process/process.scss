@@ -160,8 +160,6 @@
 @media #{$tablet} {
   .process {
     padding: 20px 26px 50px;
-
-    background-image: url(#{$img-path}/process/bg768.jpg);
     &__title {
       margin: 0 0 30px 45px;
     }
@@ -192,6 +190,13 @@
     }
   }
 }
+
+@media #{$google} {
+  .process {
+    background-image: url(#{$img-path}/process/bg1024.jpg);
+  }
+}
+
 @media #{$smart} {
   .process {
     padding: 37px $smart-padding 30px;

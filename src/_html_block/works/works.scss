@@ -6,8 +6,9 @@
     position: relative;
     z-index: 200;
 
-    @include main-title(0 0 10px);
     text-align: center;
+
+    @include main-title(0 0 10px);
   }
   &__list {
     position: relative;
