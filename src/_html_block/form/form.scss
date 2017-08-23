@@ -174,12 +174,11 @@
     letter-spacing: $letter-spacing-25;
   }
 }
+
 @media #{$tablet} {
   .form {
     &-wrap {
       padding: 30px 0;
-
-      background-image: url(#{$img-path}/form/bg768.jpg);
     }
     &-title {
       margin: 0 0 30px;
@@ -191,6 +190,15 @@
     }
   }
 }
+
+@media #{$google} {
+  .form {
+    &-wrap {
+      background-image: url(#{$img-path}/form/bg1024.jpg);
+    }
+  }
+}
+
 @media #{$smart} {
   .form {
     &--present {

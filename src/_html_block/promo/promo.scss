@@ -2,13 +2,13 @@
   position: relative;
   &__animation {
     .promo__img-2 {
-      animation: promoStairsOn .6s linear forwards, promoStairsOn .6s linear reverse 3.2s forwards;
+      animation: promoStairsOn .6s linear forwards;
     }
     .promo__img-3 {
-      animation: promoStairsOn .6s linear .6s forwards, promoStairsOn .6s linear reverse 2.6s forwards;
+      animation: promoStairsOn .6s linear .6s forwards;
     }
     .promo__img-4 {
-      animation: promoStairsOn .6s linear 1.2s forwards, promoStairsOn .6s linear reverse 2s forwards;
+      animation: promoStairsOn .6s linear 1.2s forwards;
     }
 
     .promo__slogan-1,
@@ -263,6 +263,9 @@
     }
     &__info {
       margin-top: 112px;
+    }
+    &__title {
+      font-size: 28px;
     }
     &__info-text {
       margin: 0 0 90px;

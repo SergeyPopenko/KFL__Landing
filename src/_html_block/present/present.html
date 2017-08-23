@@ -4,14 +4,17 @@
     <h2 class="present__animation-title">Outstanding decisions</h2>
     <figure class="present__img">
       <picture class="present__img-1">
+        <source srcset="img/present/night1024.jpg" media="(max-width: 1024px) and (min-width: 768px)">
         <source srcset="img/present/night320.jpg" media="(max-width: 767px)">
         <img src="img/present/night.jpg" alt="Night present">
       </picture>
       <picture class="present__img-2">
+        <source srcset="img/present/light1024.jpg" media="(max-width: 1024px) and (min-width: 768px)">
         <source srcset="img/present/light320.jpg" media="(max-width: 767px)">
         <img src="img/present/light.jpg" alt="Night light present">
       </picture>
       <picture class="present__img-3">
+        <source srcset="img/present/day1024.jpg" media="(max-width: 1024px) and (min-width: 768px)">
         <source srcset="img/present/day320.jpg" media="(max-width: 767px)">
         <img src="img/present/day.jpg" alt="Day present">
       </picture>
@@ -20,9 +23,9 @@
   <div class="present__form">
     <p class="present__form-descr">
       First step to a growing business
-      <span>creative website from 5000</span>
+      <span>creative website <!-- from 5000 --></span>
     </p>
-    <form action="/echo" method="POST" class="form form--present">
+    <form action="/reg.php" method="POST" class="form form--present" onsubmit="ga('send','event','Button','Send','First step'); onSubmit();">
       <div class="form__field-wrap">
         <fieldset class="form__field form__field--present form__field--short">
           <input type="text" name="name" id="present-name" class="form__input form__input--present" required autocomplete="on">

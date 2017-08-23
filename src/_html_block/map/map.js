@@ -1,5 +1,5 @@
 // Map
-var coordinate = {lat: 39.966934, lng: -75.173963};
+var coordinate = {lat: 39.949039, lng: -75.147211};
 if (window.innerWidth > 767) {
   var scale = 15,
       drag = false,
