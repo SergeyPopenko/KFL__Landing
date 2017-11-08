@@ -1,7 +1,7 @@
 .benefits {
-  padding: 37px 55px;
+  padding: 37px 20px 70px 20px;
 
-  background: $bg-gray;
+  // background: $bg-gray;
   &__title {
     text-align: center;
 
@@ -25,16 +25,49 @@
       content: close-quote;
     }
   }
+
+  &__wrap {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   &__descr {
-    font-size: 30px;
+    width: 50%;
+    margin: 0;
+    padding: 0 0 0 10px;
+
+    font-size: 24px;
     line-height: 2;
-    color: #989797;
+    color: #333;
     text-align: center;
+    text-align: left;
     letter-spacing: $letter-spacing-25;
-    p {
+
+    list-style: none;
+
+    li {
+      position: relative;
+
       margin: 0;
+      padding: 0 0 0 1.1em;
 
       transition: .5s;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: .668em;
+        height: .668em;
+        margin-top: -.4em;
+
+        border-radius: 50%;
+        background: #fed4b4;
+
+        content: "";
+      }
     }
   }
   &__descr-gray {
@@ -43,18 +76,37 @@
 }
 @media #{$tablet} {
   .benefits {
-    padding: 37px 58px;
+    &__wrap {
+      flex-wrap: wrap;
+      // display: flex;
+      justify-content: center;
+    }
+    // padding: 37px 58px;
     &__quote {
       font-size: 18px;
     }
     &__descr {
-      font-size: 24px;
+      width: 64%;
+      min-width: 380px;
+
+      font-size: 20px;
     }
   }
 }
 @media #{$smart} {
   .benefits {
-    padding: 37px $smart-padding 24px;
+    &__descr {
+      // width: 100%;
+      min-width: 310px;
+
+      font-size: 13px;
+      // text-align: center;      
+    }
+  }
+}
+@media #{$smart-landscape} {
+  .benefits {
+    padding: 37px $smart-padding 35px;
 
     background: $col-fff;
     &__title {
@@ -67,6 +119,8 @@
       line-height: 1.29;
     }
     &__descr {
+      min-width: 380px;
+
       font-size: 16px;
       line-height: 1.88;
       letter-spacing: .01em;

@@ -1,26 +1,30 @@
-<section class="form-wrap">
-  <h2 class="form-title">Want to know more?</h2>
-  <form action="/reg.php" method="POST" class="form form--alone" onsubmit="ga('send','event','Button','Send','Know more'); onSubmit()">
-    <fieldset class="form__field">
-      <input type="text" name="name" id="name" class="form__input" required autocomplete="on">
-      <label class="form__label" for="name">Your name*</label>
-    </fieldset>
-    <fieldset class="form__field">
-      <input type="email" name="email" id="email" class="form__input" required autocomplete="on">
-      <label class="form__label" for="email">Your email*</label>
-    </fieldset>
-    <fieldset class="form__field form__field-textarea">
-      <input type="text" name="message" id="message" class="form__input" autocomplete="on">
-      <label class="form__label" for="message">Tell us about your project</label>
-    </fieldset>
-    <button type="submit" class="btn btn--orange">Send</button>
-  </form>
-  <div class="form__feedback">
-    <button type="button" class="btn-close">
-      <svg width="30" height="30">
-        <use xlink:href="#icon-close" />
-      </svg>
-    </button>
-    <p class="form__feedback-text"></p>
-  </div>
+<section id="form-id"  class="form-container">
+    <div class="wrapper">
+      <div class="form-wrap">
+        <h2 class="form-title">Want to know more?</h2>
+        <form action="/reg.php" method="POST" class="form form--alone" onsubmit="ga('send','event','Button','Send','Know more'); onSubmit()">
+          <fieldset class="form__field">
+            <input type="text" name="name" id="name" class="form__input" required autocomplete="on">
+            <label class="form__label" for="name">Your name*</label>
+          </fieldset>
+          <fieldset class="form__field">
+            <input type="email" name="email" id="email" class="form__input" required autocomplete="on">
+            <label class="form__label" for="email">Your email*</label>
+          </fieldset>
+          <fieldset class="form__field form__field-textarea">
+            <input type="text" name="message" id="message" class="form__input" autocomplete="on">
+            <label class="form__label" for="message">Tell us about your project</label>
+          </fieldset>
+          <button type="submit" class="btn btn--orange">Send</button>
+        </form>
+        <div class="form__feedback">
+          <button type="button" class="btn-close">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-close" />
+            </svg>
+          </button>
+          <p class="form__feedback-text"></p>
+        </div>
+      </div>
+    </div>
 </section>

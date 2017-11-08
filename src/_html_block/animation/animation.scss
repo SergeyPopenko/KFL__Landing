@@ -1,0 +1,47 @@
+.animate {
+  position: relative;
+}
+
+.animate__block {
+  display: none;
+}
+
+@media #{$dt-big} {
+  .animate__block {
+    position: absolute;
+
+    display: block;
+    width: 260px;
+    height: 360px;
+    margin: 0;
+
+    background-image: url(../img/svg/dot.svg);
+    background-repeat: repeat;
+    background-size: 32px 50px;;
+    &--right {
+      top: 0;
+      left: 100%;
+
+      background-position: left 0 top 0;
+    }
+    &--left {
+      right: 100%;
+      bottom: 0;
+
+      background-position: right 0 bottom 0;
+    }
+    &--small {
+      width: 96px;
+
+      background-image: url(../img/svg/dot--black.svg);
+      &.animate__block--left {
+        right: auto;
+        left: 0;
+      }
+      &.animate__block--right {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+}

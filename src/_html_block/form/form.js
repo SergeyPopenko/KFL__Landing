@@ -43,6 +43,7 @@
     });
   // ----------------------------------------------------
   $(".form [type='submit']").on("click", function(e){
+    console.log(window.innerWidth);
     var $form = $(this).closest("form");
     $form.find(":required").each(function(){
       validEmpty($(this));

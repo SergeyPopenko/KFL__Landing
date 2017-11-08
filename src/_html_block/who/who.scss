@@ -3,24 +3,28 @@
 
   padding: 35px 0 50px;
   &--active {
-    &::after {
-      transform: perspective(1000px) rotateY(-19deg);
+    .wrapper {
+      &::after {
+        transform: perspective(1000px) rotateY(-19deg);
+      }
     }
   }
-  &::after {
-    position: absolute;
-    top: 50px;
-    right: 0;
+  .wrapper {
+    &::after {
+      position: absolute;
+      top: 50px;
+      right: 0;
 
-    width: 420px;
-    height: 440px;
+      width: 420px;
+      height: 440px;
 
-    opacity: .6;
-    background: linear-gradient(to bottom, #02a0f1, #15d4d9) no-repeat 50% 0;
+      opacity: .6;
+      background: linear-gradient(to bottom, #02a0f1, #15d4d9) no-repeat 50% 0;
 
-    content: "";
-    transition: 1s;
-    transform-origin: 100% 50%;
+      content: "";
+      transition: 1s;
+      transform-origin: 100% 50%;
+    }
   }
   &__title {
     position: relative;

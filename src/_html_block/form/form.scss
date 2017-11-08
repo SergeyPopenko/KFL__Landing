@@ -1,3 +1,22 @@
+.form-container {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(2,133,233,.87);
+    background: linear-gradient(to bottom, rgba(2,133,233,.87) 0%, rgba(13,189,202,.83) 100%);
+
+    content: "";
+  }
+}
+
+
 .form {
   &--alone {
     max-width: 400px;
@@ -11,6 +30,8 @@
   }
   &-wrap {
     position: relative;
+    position: relative;
+    z-index: 1;
 
     padding: 46px 0 50px;
 
@@ -18,6 +39,20 @@
     background-size: cover;
 
     text-align: center;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(2,133,233,.87);
+      background: linear-gradient(to bottom, rgba(2,133,233,.87) 0%, rgba(13,189,202,.83) 100%);
+
+      content: "";
+    }
   }
   &-title {
     margin: 0 0 50px;

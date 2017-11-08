@@ -1,0 +1,194 @@
+.product {
+  position: relative;
+
+  padding: 60px 0 40px 0;
+
+  background: #f0f0f0;
+
+  .wrapper {
+    position: relative;
+    z-index: 9;
+  }
+
+  &__bg-title {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // z-index: 8;
+    // font-size: 12em;
+    // color: #f5f5f5;
+    // text-align: right;
+    @include bg-title(0 20px);
+
+    &--bottom {
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
+
+      text-align: left;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 10;
+
+    @include main-title(0);
+  }
+
+  &__img {
+    z-index: 9;
+
+    margin: -60px 0 15px 0;
+    img {
+      display: inline-block;
+      max-width: 100%;
+      margin: 0 0 0 17%;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__description {
+    // letter-spacing: $letter-spacing-25;
+    position: relative;
+    z-index: 10;
+
+    width: 55%;
+    margin: 0;
+    padding: 0 0 0 40px;
+
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  &__list {
+    width: 45%;
+    margin: -125px 0 0 0;
+    padding: 50px 30px 80px 30px;
+
+    background: $bg;
+
+    font-size: 24px;
+    line-height: 2;
+    color: #333;
+    text-align: center;
+    // letter-spacing: $letter-spacing-25;
+    text-align: left;
+    text-transform: uppercase;
+
+    list-style: none;
+    li {
+      position: relative;
+
+      margin: 0;
+      padding: 0 0 0 1.1em;
+
+      transition: .5s;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: .668em;
+        height: .668em;
+        margin-top: -.4em;
+
+        border-radius: 50%;
+        background: #fed4b4;
+
+        content: "";
+      }
+    }
+  }
+}
+@media #{$tablet} {
+  .product {
+    padding: 40px 0 30px 0;
+    &__title {
+      @include main-title(0 0 0 60px);
+    }
+
+    &__img {
+      display: block;
+      width: 60%;
+      min-width: 600px;
+      margin: -25px auto 40px auto;
+      img {
+        margin: 0;
+      }
+    }
+
+    &__wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__description {
+      width: 75%;
+      margin: 0;
+
+      order: 2;
+    }
+
+    &__list {
+      width: 50%;
+      min-width: 550px;
+      margin: 0 0 40px 0;
+      padding: 40px 30px 30px 30px;
+
+      font-size: 20px;
+
+      order: 1;
+    }
+
+    &__bg-title {
+      top: .2em;
+      &--bottom {
+        top: auto;
+      }
+    }
+  }
+}
+
+@media #{$smart} {
+  .product {
+    padding: 30px 0;
+    &__title {
+      @include main-title(0 0 20px 40px);
+    }
+    &__wrap {
+      padding: 0 20px;
+    }
+    &__bg-title {
+      display: none;
+    }
+
+    &__description {
+      display: none;
+    }
+
+    &__img {
+      width: 80%;
+      min-width: 280px;
+      margin: 0 auto 30px auto;
+    }
+
+    &__list {
+      width: 64%;
+      min-width: 280px;
+      margin: 0;
+      padding: 0 0 0 10px;
+
+      background: transparent;
+
+      font-size: 16px;
+    }
+  }
+}
